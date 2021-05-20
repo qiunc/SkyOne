@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">智能吊装系统</string>
+    <string name="temperature">温\u3000度:</string>
+    <string name="humidity">湿\u3000度:</string>
+    <string name="ammonia_gas">氨\u3000气:</string>
+    <string name="ppm">PM2.5:</string>
+
+    <!--网络请求-->
+    <string name="http_exception">无法连接服务器</string>
+    <string name="connect_exception">连接服务器超时</string>
+    <string name="json_exception">数据解析失败</string>
+    <string name="unknown_host_exception">无法解析该域名</string>
+    <string name="unknown_exception">无法解析该域名</string>
+
+    <string name="no_authority">无访问权限，请联系管理员！</string>
+    <string name="service_timeout">访问服务器超时！</string>
+    <string name="dialog_loading">正在加载...</string>
+    <string name="title_notification">前台服务</string>
+
+</resources>

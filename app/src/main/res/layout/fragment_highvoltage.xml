@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/color_383838"
+    android:paddingRight="60px"
+    android:paddingLeft="60px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_marginTop="160px"
+        android:orientation="vertical"
+        android:layout_width="303px"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_marginBottom="20px"
+            android:gravity="center"
+            android:textSize="58px"
+            android:layout_gravity="center"
+            android:text="A组"
+            android:textColor="@color/color_EDE8E0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/r1"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="160px"
+        android:orientation="vertical"
+        android:layout_width="303px"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_marginBottom="20px"
+            android:gravity="center"
+            android:textSize="58px"
+            android:layout_gravity="center"
+            android:text="B组"
+            android:textColor="@color/color_EDE8E0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/r2"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="158px"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btn_a"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/btn_bg"
+            android:textSize="44px"
+            android:text="全选"
+            android:layout_width="258px"
+            android:layout_height="85px" />
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btn_c"
+            android:layout_marginTop="55px"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/btn_bg"
+            android:textSize="44px"
+            android:text="取消"
+            android:layout_width="258px"
+            android:layout_height="85px" />
+
+
+        <TextView
+
+            android:layout_marginTop="120px"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="供电开关"
+            android:textSize="44px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/btn_on_off"
+            android:src="@mipmap/off_icon"
+            android:layout_width="387px"
+            android:layout_height="212px" />
+
+
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="190px"
+            android:orientation="horizontal"
+            android:layout_width="303px"
+            android:background="@color/color_383838"
+            android:layout_height="130px">
+
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="303px"
+                android:layout_height="130px" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="38px"
+                android:text=""
+                android:textSize="27px"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

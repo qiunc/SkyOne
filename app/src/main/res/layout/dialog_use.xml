@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@mipmap/use_bgs"
+    android:layout_width="825px"
+    android:layout_height="665px">
+
+
+
+    <TextView
+        android:layout_marginTop="5px"
+        android:layout_gravity="center|top"
+        android:textColor="#EDE8E0"
+        android:text="使用说明"
+        android:textSize="44px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginRight="50px"
+        android:layout_marginLeft="50px"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="39px"
+        android:text="使用说明：按下电源按钮，启动系统后，进入登录页"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:layout_marginRight="50px"
+        android:layout_marginLeft="50px"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="39px"
+        android:text="本系统有七个子系统独立控制，分别为：摇臂高压低、通风；给排水、照明、监控信息系统。各系统独立控制，互不干扰，模块化设计，满足你的需求。"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="37px"
+        android:text="退出"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+</FrameLayout>
