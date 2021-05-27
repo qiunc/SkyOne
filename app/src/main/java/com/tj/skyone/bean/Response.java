@@ -1,24 +1,17 @@
 package com.tj.skyone.bean;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
- * @describe
- * @anthor wdq
- * @time 2021/2/2 09:00
- * @email wudq@infore.com
+ * @describe 服务端返回数据类
+ * codes : 0
+ * codedes : success
+ * datas : [{"loginName":"xxxxxxxxxx","loginPassword":"xxxxxxxxxx"}]
+ * methodName : appLogin
+ * dataLen : xxxxend
  */
 public class Response implements Serializable {
-
-    /**
-     * codes : 0
-     * codedes : success
-     * datas : [{"loginName":"xxxxxxxxxx","loginPassword":"xxxxxxxxxx"}]
-     * methodName : appLogin
-     * dataLen : xxxxend
-     */
-
+    private static final long serialVersionUID = 1L;
     private String codes;
     private String codedes;
     private String methodName;

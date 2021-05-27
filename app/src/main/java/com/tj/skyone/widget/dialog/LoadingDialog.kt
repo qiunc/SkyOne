@@ -7,15 +7,8 @@ import android.view.animation.LinearInterpolator
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDialog
 import com.blankj.utilcode.util.StringUtils
-import com.blankj.utilcode.util.ToastUtils
 import com.tj.skyone.R
 import com.yatoooon.screenadaptation.ScreenAdapterTools
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
-import java.util.*
-import java.util.concurrent.TimeUnit
 
 class LoadingDialog : AppCompatDialog {
 

@@ -3,7 +3,7 @@ package com.tj.skyone.bean;
 import java.io.Serializable;
 
 /**
- * @describe
+ * @describe 主页信息类
  * @anthor wdq
  * @time 2021/2/2 11:45
  * @email wudq@infore.com

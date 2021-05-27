@@ -11,14 +11,17 @@ import org.greenrobot.eventbus.EventBus;
 
 
 public class EventBusUtils {
+    //注册EventBus
     public static void register(Object object) {
         EventBus.getDefault().register(object);
     }
 
+    //解除注册
     public static void unregister(Object object) {
         EventBus.getDefault().unregister(object);
     }
 
+    //发送消息
     public static void post(int code, Object o) {
         EventBus.getDefault().post(new AnyEventType(code, o));
     }

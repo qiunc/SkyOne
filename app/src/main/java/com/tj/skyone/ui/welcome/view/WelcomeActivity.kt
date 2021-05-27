@@ -31,7 +31,8 @@ class WelcomeActivity : AppCompatActivity() {
 
 
             try {
-                if (!ServiceUtils.isServiceRunning(MyService::class.java)) ServiceUtils.startService(MyService::class.java)
+                if (!ServiceUtils.isServiceRunning(MyService::class.java))
+                    ServiceUtils.startService(MyService::class.java)
             } catch (e: Exception) {
                 e.printStackTrace()
             }
