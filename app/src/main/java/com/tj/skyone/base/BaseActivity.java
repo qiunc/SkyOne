@@ -85,7 +85,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
     @Override
     protected void onResume() {
         try {
-
+            //检查后台服务状态
             if (!ServiceUtils.isServiceRunning(MyService.class))
                 ServiceUtils.startService(MyService.class);
 

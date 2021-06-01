@@ -1,9 +1,10 @@
 package com.tj.skyone.bean;
 
-import com.tj.skyone.widget.dialog.MgtDialog;
-
 import java.io.Serializable;
 
+/**
+ * 用户属性Bean
+ */
 public class MgtBean implements Serializable {
     private String id;
     private String name;

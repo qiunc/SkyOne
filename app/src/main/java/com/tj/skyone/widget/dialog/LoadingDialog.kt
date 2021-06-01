@@ -31,7 +31,7 @@ class LoadingDialog : AppCompatDialog {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.dialog_loading_to);
+        setContentView(R.layout.dialog_loading_to)
         ScreenAdapterTools.getInstance().loadView(window?.decorView)
 //        ivLoding = findViewById(R.id.iv_loding)
         titleTextView = findViewById(R.id.loading_text)
@@ -42,26 +42,7 @@ class LoadingDialog : AppCompatDialog {
         val interpolator = LinearInterpolator()
 //        operatingAnim?.interpolator = interpolator
 
-        setCanceledOnTouchOutside(false);
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-
-//        if (null != ivLoding) ivLoding?.startAnimation(operatingAnim)
-    }
-
-    override fun onStop() {
-        super.onStop()
-//        if (null != ivLoding) ivLoding?.clearAnimation()
-
-
-//        if (disposable != null && !disposable!!.isDisposed()) {
-//            disposable!!.dispose()
-//
-//        }
-
+        setCanceledOnTouchOutside(false)
     }
 
     fun setTitle(title: String?) {
@@ -116,14 +97,4 @@ class LoadingDialog : AppCompatDialog {
         }
     }
 
-    override fun dismiss() {
-//
-//        if (disposable != null && !disposable!!.isDisposed()) {
-//            disposable!!.dispose()
-//
-//        }
-
-        super.dismiss()
-
-    }
 }

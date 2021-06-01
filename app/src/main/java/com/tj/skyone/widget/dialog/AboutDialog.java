@@ -1,7 +1,6 @@
 package com.tj.skyone.widget.dialog;
 
 import android.content.Context;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatDialog;
 
@@ -11,7 +10,7 @@ import com.yatoooon.screenadaptation.ScreenAdapterTools;
 import butterknife.ButterKnife;
 
 /**
- *
+ * 关于我们对话框
  */
 public class AboutDialog extends AppCompatDialog {
 
@@ -26,12 +25,7 @@ public class AboutDialog extends AppCompatDialog {
         this.setCancelable(false);
         ButterKnife.bind(this);
 
-        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dismiss();
-            }
-        });
+        findViewById(R.id.btn).setOnClickListener(view -> dismiss());
 
     }
 

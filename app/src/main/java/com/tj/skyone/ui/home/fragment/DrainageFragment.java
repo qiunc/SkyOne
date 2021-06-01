@@ -1,7 +1,6 @@
 package com.tj.skyone.ui.home.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,7 +21,6 @@ import com.tj.skyone.R;
 import com.tj.skyone.adapter.GropAdapter;
 import com.tj.skyone.base.BaseFragment;
 import com.tj.skyone.bean.GroupBean;
-import com.tj.skyone.bean.RockerBean;
 import com.tj.skyone.bean.WaterBean;
 import com.tj.skyone.utils.HttpParam;
 import com.tj.skyone.utils.NoDoubleClickUtils;
@@ -131,24 +129,21 @@ public class DrainageFragment extends BaseFragment {
         });
 
 
-        gropAdapter2.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
+        gropAdapter2.setOnItemClickListener((adapter, view, position) -> {
 
-                List<GroupBean> list = (List<GroupBean>) adapter.getData();
+            List<GroupBean> list = (List<GroupBean>) adapter.getData();
 
-                if (list.get(position).isSelect()){
+            if (list.get(position).isSelect()) {
 
-                    list.get(position).setSelect(false);
+                list.get(position).setSelect(false);
 
-                }else{
+            } else {
 
-                    list.get(position).setSelect(true);
-
-                }
-                gropAdapter2.notifyDataSetChanged();
+                list.get(position).setSelect(true);
 
             }
+            gropAdapter2.notifyDataSetChanged();
+
         });
 
     }

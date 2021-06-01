@@ -8,6 +8,9 @@ import com.tj.skyone.utils.eventbus.EventBusConsts
 import com.tj.skyone.utils.eventbus.EventBusUtils
 import com.tj.skyone.widget.dialog.PubDialog
 
+/**
+ * 用户管理适配器
+ */
 
 class MgtAdapter : MyBaseQuickAdapter<MgtBean, BaseViewHolder>(R.layout.item_mgt) {
 
@@ -26,7 +29,6 @@ class MgtAdapter : MyBaseQuickAdapter<MgtBean, BaseViewHolder>(R.layout.item_mgt
         btn.setOnClickListener {
 
 
-
             val dialog = PubDialog(context,false,"删除用户","是否删除当前选择用户！",true,true)
             dialog.show()
 
@@ -41,14 +43,11 @@ class MgtAdapter : MyBaseQuickAdapter<MgtBean, BaseViewHolder>(R.layout.item_mgt
             dialog.ok.setOnClickListener {
 
 
-
-
                 dialog.dismiss()
             }
 
 
         }
-
 
 
     }

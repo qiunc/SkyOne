@@ -1,7 +1,6 @@
 package com.tj.skyone.widget.dialog;
 
 import android.content.Context;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatDialog;
@@ -9,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tj.skyone.R;
-import com.tj.skyone.adapter.GropAdapter;
 import com.tj.skyone.adapter.MgtAdapter;
 import com.tj.skyone.bean.MgtBean;
 import com.yatoooon.screenadaptation.ScreenAdapterTools;
@@ -21,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- *
+ * 用户管理对话框
  */
 public class MgtDialog extends AppCompatDialog {
 
@@ -74,12 +72,7 @@ public class MgtDialog extends AppCompatDialog {
 
         mgtAdapter.setNewInstance(list);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dismiss();
-            }
-        });
+        btn.setOnClickListener(view -> dismiss());
 
 
 

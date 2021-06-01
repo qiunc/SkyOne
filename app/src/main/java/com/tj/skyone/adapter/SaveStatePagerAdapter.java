@@ -11,7 +11,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import java.util.List;
 
-
+/**
+ * fragment管理适配器
+ */
 public class SaveStatePagerAdapter extends PagerAdapter {
 
     private List<Fragment> fragments;

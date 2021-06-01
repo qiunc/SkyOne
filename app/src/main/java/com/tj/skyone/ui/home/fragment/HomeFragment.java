@@ -7,7 +7,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.blankj.utilcode.util.GsonUtils;
-import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.TimeUtils;
 import com.google.gson.Gson;
@@ -17,9 +16,7 @@ import com.tj.skyone.bean.HomeBean;
 import com.tj.skyone.utils.HttpParam;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.TimeUtil;
-import com.tj.skyone.utils.eventbus.AnyEventType;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
-import com.tj.skyone.utils.eventbus.EventBusConsts;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -30,7 +27,6 @@ import butterknife.BindView;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -84,19 +80,16 @@ public class HomeFragment extends BaseFragment {
         tvDates.setText(TimeUtils.getChineseWeek(TimeUtils.getNowDate()));
 
 
-        disposable = Observable.interval(0,5,  TimeUnit.SECONDS).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<Long>() {
-                    @Override
-                    public void accept(Long aLong) {
+        disposable = Observable.interval(0, 5, TimeUnit.SECONDS).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(aLong -> {
 
-                        String time = TimeUtil.timeToString();
-                        tvTime.setText(time);
+                    String time1 = TimeUtil.timeToString();
+                    tvTime.setText(time1);
 
-                        String date = TimeUtil.dateToStrings();
+                    String date1 = TimeUtil.dateToStrings();
 
-                        tvDate.setText(date);
-                        tvDates.setText(TimeUtils.getChineseWeek(TimeUtils.getNowDate()));
-                    }
+                    tvDate.setText(date1);
+                    tvDates.setText(TimeUtils.getChineseWeek(TimeUtils.getNowDate()));
                 });
 
 

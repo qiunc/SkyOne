@@ -5,8 +5,6 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.blankj.utilcode.util.GsonUtils;
-import com.blankj.utilcode.util.JsonUtils;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
@@ -16,12 +14,10 @@ import com.tj.skyone.base.BaseActivity;
 import com.tj.skyone.ui.home.view.HomeActivity;
 import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
-import com.tj.skyone.utils.eventbus.AnyEventType;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
 
 import org.greenrobot.eventbus.Subscribe;
-import org.json.JSONObject;
 
 import java.util.HashMap;
 

@@ -1,20 +1,15 @@
 package com.tj.skyone.adapter
 
 import android.graphics.drawable.GradientDrawable
-import android.util.Log
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.tj.skyone.R
 import com.tj.skyone.bean.InofBean
-import com.tj.skyone.bean.InofBeans
-import java.util.*
 
 /**
- * @describe 女厕第一排
+ * @describe infoFragment底部recyclerview适配器
  * @anthor wdq
  * @time 2020/6/11 15:28
  * @email wudq@infore.com

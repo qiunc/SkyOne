@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- *
+ * 创建用户对话框
  */
 public class CreateUserDialog extends AppCompatDialog {
 

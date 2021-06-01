@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- *
+ * 关机对话框
  */
 public class PubDialog extends AppCompatDialog {
 

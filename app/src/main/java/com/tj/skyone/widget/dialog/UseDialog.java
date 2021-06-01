@@ -1,17 +1,14 @@
 package com.tj.skyone.widget.dialog;
 
 import android.content.Context;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatDialog;
 
 import com.tj.skyone.R;
 import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
-import butterknife.ButterKnife;
-
 /**
- *
+ * 使用说明对话框
  */
 public class UseDialog extends AppCompatDialog {
 
@@ -26,12 +23,7 @@ public class UseDialog extends AppCompatDialog {
         ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
         this.setCancelable(false);
 
-        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dismiss();
-            }
-        });
+        findViewById(R.id.btn).setOnClickListener(view -> dismiss());
 
     }
 

@@ -3,7 +3,6 @@ package com.tj.skyone.ui.home.view;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -44,10 +43,8 @@ import com.tj.skyone.utils.eventbus.EventBusUtils;
 import com.tj.skyone.widget.dialog.AboutDialog;
 import com.tj.skyone.widget.dialog.CreateUserDialog;
 import com.tj.skyone.widget.dialog.HomePopWindow;
-import com.tj.skyone.widget.dialog.MgtDialog;
 import com.tj.skyone.widget.dialog.PubDialog;
 import com.tj.skyone.widget.dialog.UseDialog;
-import com.tj.skyone.widget.dialog.UserDialog;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -55,7 +52,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class HomeActivity extends BaseActivity {
@@ -130,6 +126,7 @@ public class HomeActivity extends BaseActivity {
         return R.layout.activity_home;
     }
 
+    //初始化布局参数
     @Override
     protected void initEventAndData() {
         EventBusUtils.register(this);
@@ -185,6 +182,7 @@ public class HomeActivity extends BaseActivity {
     @Override
     protected void isStart() {
 
+        //向设备发进入主页面指令
         HttpParam httpParam = new HttpParam();
         httpParam.getMap().put("methodName", "homepage");
         httpParam.getMap().put("dataLen", "end");
@@ -212,16 +210,18 @@ public class HomeActivity extends BaseActivity {
 
     @Subscribe()
     public void onEvent(AnyEventTypes event) {
-
+        //解除加载等待框
         getDialog().dismiss();
 
         if (alertDialog!=null)alertDialog.dismiss();
 
+        //返回标识为temphumi  激活订阅事件
         if (StringUtils.equals("temphumi", event.getEventCode())) {
 
             HomeBean bean = GsonUtils.fromJson(event.getAnyData().toString(), HomeBean.class);
-
+            //设置主界面温度
             homeA.setText(StringUtils.isEmpty(bean.getTemperature()) ? "0℃" : bean.getTemperature() + "℃");
+            //设置主界面湿度
             homeB.setText(StringUtils.isEmpty(bean.getHumidity()) ? "0%" : bean.getHumidity() + "%");
 
             String runstatus = bean.getRunstatus();
@@ -395,35 +395,32 @@ public class HomeActivity extends BaseActivity {
                         dialog.show();
                         dialog.img.setImageResource(R.mipmap.gj_icon);
 
-                        dialog.btn.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                dialog.dismiss();
+                        dialog.btn.setOnClickListener(view1 -> {
+                            dialog.dismiss();
 
-                                HttpParam httpParam = new HttpParam();
-                                httpParam.getMap().put("methodName", "homepage");
-                                httpParam.getMap().put("key", "OFF");
-                                httpParam.getMap().put("dataLen", "end");
+                            HttpParam httpParam = new HttpParam();
+                            httpParam.getMap().put("methodName", "homepage");
+                            httpParam.getMap().put("key", "OFF");
+                            httpParam.getMap().put("dataLen", "end");
 
-                                TcpClient.getInstance().sendChsPrtCmds(new Gson().toJson(httpParam.getMap()), 1001);
+                            TcpClient.getInstance().sendChsPrtCmds(new Gson().toJson(httpParam.getMap()), 1001);
 
 
-                                alertDialog = new AlertDialog.Builder(atys).create();
-                                alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-                                alertDialog.setCancelable(false);
-                                alertDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
-                                    @Override
-                                    public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-                                        if (keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_BACK)
-                                            return true;
-                                        return false;
-                                    }
-                                });
-                                alertDialog.show();
-                                alertDialog.setContentView(R.layout.loading_alert);
-                                alertDialog.setCanceledOnTouchOutside(false);
+                            alertDialog = new AlertDialog.Builder(atys).create();
+                            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+                            alertDialog.setCancelable(false);
+                            alertDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+                                @Override
+                                public boolean onKey(DialogInterface dialog12, int keyCode, KeyEvent event) {
+                                    if (keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_BACK)
+                                        return true;
+                                    return false;
+                                }
+                            });
+                            alertDialog.show();
+                            alertDialog.setContentView(R.layout.loading_alert);
+                            alertDialog.setCanceledOnTouchOutside(false);
 
-                            }
                         });
 
                     } else {
@@ -461,15 +458,9 @@ public class HomeActivity extends BaseActivity {
                                 alertDialog.show();
                                 alertDialog.setContentView(R.layout.loading_alert);
                                 alertDialog.setCanceledOnTouchOutside(false);
-
-
                             }
                         });
-
-
                     }
-
-
                     break;
                 case R.id.test:
                     readyGo(RecordActivity.class);
@@ -493,15 +484,13 @@ public class HomeActivity extends BaseActivity {
 //                });
 
                     //用户
-                    homePopWindow.view2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
+                    homePopWindow.view2.setOnClickListener(view12 -> {
 
 //                        UserDialog userDialog = new UserDialog(HomeActivity.this);
 //                        userDialog.show();
 
-                            createUserDialog = new CreateUserDialog(HomeActivity.this, true);
-                            createUserDialog.show();
+                        createUserDialog = new CreateUserDialog(HomeActivity.this, true);
+                        createUserDialog.show();
 
 
 //                        userDialog.add.setOnClickListener(new View.OnClickListener() {
@@ -539,65 +528,41 @@ public class HomeActivity extends BaseActivity {
 //                        });
 
 
-                        }
                     });
 
                     //关于
-                    homePopWindow.view3.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
+                    homePopWindow.view3.setOnClickListener(view13 -> {
 
-                            AboutDialog dialog = new AboutDialog(HomeActivity.this);
-                            dialog.show();
+                        AboutDialog dialog = new AboutDialog(HomeActivity.this);
+                        dialog.show();
 
-                        }
                     });
 
                     //使用
-                    homePopWindow.view4.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
+                    homePopWindow.view4.setOnClickListener(view14 -> {
 
-                            UseDialog dialog = new UseDialog(HomeActivity.this);
-                            dialog.show();
+                        UseDialog dialog = new UseDialog(HomeActivity.this);
+                        dialog.show();
 
 
-                        }
                     });
 
-                    homePopWindow.view5.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
+                    homePopWindow.view5.setOnClickListener(view15 -> {
+                        PubDialog dialog1 = new PubDialog(HomeActivity.this, false, "退出", "是否退出！", true, true);
+                        dialog1.show();
+                        dialog1.btn.setOnClickListener(view1512 -> {
 
-                            PubDialog dialog1 = new PubDialog(HomeActivity.this, false, "退出", "是否退出！", true, true);
-                            dialog1.show();
-                            dialog1.btn.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-
-                                    finish();
-                                    System.exit(0);
+                            finish();
+                            System.exit(0);
 
 
-                                }
-                            });
+                        });
 
-                            dialog1.ok.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-
-                                    dialog1.dismiss();
-
-                                }
-                            });
+                        dialog1.ok.setOnClickListener(view151 -> dialog1.dismiss());
 
 
-                        }
                     });
-
-
                     PopupWindowCompat.showAsDropDown(homePopWindow, linTops, mOffsetX, mOffsetY, mGravity);
-
                     break;
             }
 

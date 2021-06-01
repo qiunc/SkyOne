@@ -9,7 +9,7 @@ import com.yatoooon.screenadaptation.ScreenAdapterTools
 /**
  * 自定义适配器
  * 1.实现屏幕适配
- * 2.防止连续点击操作
+ * 2.防止连续点击操作（未使用)
  */
 abstract class MyBaseQuickAdapter<T, VH : BaseViewHolder> : BaseQuickAdapter<T, VH> {
 
