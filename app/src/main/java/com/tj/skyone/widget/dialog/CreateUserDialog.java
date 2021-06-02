@@ -11,7 +11,7 @@ import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.tj.skyone.R;
 import com.tj.skyone.bean.UserBean;
-import com.tj.skyone.utils.NoDoubleClickUtils;
+import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.eventbus.EventBusConsts;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
 import com.yatoooon.screenadaptation.ScreenAdapterTools;
@@ -70,17 +70,17 @@ public class CreateUserDialog extends AppCompatDialog {
 
     @OnClick({R.id.btn1, R.id.btn2})
     public void onViewClicked(View view) {
-        if (!NoDoubleClickUtils.isDoubleClick()) {
+        if (GlobalApp.Companion.getOpenTheSwitch()) {
             switch (view.getId()) {
                 case R.id.btn1:
 
-                    if (StringUtils.isEmpty(etPhone.getText())){
+                    if (StringUtils.isEmpty(etPhone.getText())) {
                         ToastUtils.showLong("请输入用户名");
                         return;
                     }
 
 
-                    if (StringUtils.isEmpty(etPwd.getText())){
+                    if (StringUtils.isEmpty(etPwd.getText())) {
                         ToastUtils.showLong("请输入密码");
                         return;
                     }
@@ -118,10 +118,6 @@ public class CreateUserDialog extends AppCompatDialog {
                         EventBusUtils.post(EventBusConsts.CT_USER,bean);
 
                     }
-
-
-
-
 
                     break;
                 case R.id.btn2:

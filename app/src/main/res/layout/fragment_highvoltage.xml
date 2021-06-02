@@ -2,25 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:background="@color/color_383838"
-    android:paddingRight="60px"
-    android:paddingLeft="60px"
+    android:paddingRight="22dp"
+    android:paddingLeft="22dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-
     <LinearLayout
-        android:layout_marginTop="160px"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
-        android:layout_width="303px"
+        android:layout_width="115dp"
         android:layout_height="wrap_content">
 
 
 
         <TextView
-            android:layout_marginBottom="20px"
+            android:layout_marginBottom="7dp"
             android:gravity="center"
-            android:textSize="58px"
+            android:textSize="22sp"
             android:layout_gravity="center"
             android:text="A组"
             android:textColor="@color/color_EDE8E0"
@@ -42,17 +41,17 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="160px"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
-        android:layout_width="303px"
+        android:layout_width="115dp"
         android:layout_height="wrap_content">
 
 
 
         <TextView
-            android:layout_marginBottom="20px"
+            android:layout_marginBottom="7dp"
             android:gravity="center"
-            android:textSize="58px"
+            android:textSize="22sp"
             android:layout_gravity="center"
             android:text="B组"
             android:textColor="@color/color_EDE8E0"
@@ -74,12 +73,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="20px"
-        android:layout_marginTop="158px"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp">
 
 
         <Button
@@ -88,31 +87,31 @@
             android:gravity="center"
             android:textColor="@color/color_ffffff"
             android:background="@drawable/btn_bg"
-            android:textSize="44px"
+            android:textSize="16sp"
             android:text="全选"
-            android:layout_width="258px"
-            android:layout_height="85px" />
+            android:layout_width="98dp"
+            android:layout_height="32dp" />
 
         <Button
             android:layout_gravity="center"
             android:id="@+id/btn_c"
-            android:layout_marginTop="55px"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:textColor="@color/color_ffffff"
             android:background="@drawable/btn_bg"
-            android:textSize="44px"
+            android:textSize="16sp"
             android:text="取消"
-            android:layout_width="258px"
-            android:layout_height="85px" />
+            android:layout_width="98dp"
+            android:layout_height="32dp" />
 
 
         <TextView
 
-            android:layout_marginTop="120px"
+            android:layout_marginTop="45dp"
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:text="供电开关"
-            android:textSize="44px"
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -121,35 +120,35 @@
             android:layout_gravity="center"
             android:id="@+id/btn_on_off"
             android:src="@mipmap/off_icon"
-            android:layout_width="387px"
-            android:layout_height="212px" />
-
+            android:layout_width="147dp"
+            android:layout_height="80dp" />
 
 
         <FrameLayout
             android:layout_gravity="center"
-            android:layout_marginTop="190px"
+            android:layout_marginTop="72dp"
             android:orientation="horizontal"
-            android:layout_width="303px"
+            android:layout_width="115dp"
             android:background="@color/color_383838"
-            android:layout_height="130px">
+            android:layout_height="49dp">
 
 
             <ImageView
                 android:id="@+id/img"
-                android:layout_width="303px"
-                android:layout_height="130px" />
+                android:layout_width="115dp"
+                android:layout_height="49dp" />
 
 
             <TextView
                 android:id="@+id/name"
-                android:layout_gravity="center|left"
-                android:layout_marginLeft="38px"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="14dp"
                 android:text=""
-                android:textSize="27px"
+                android:textSize="12sp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp" />
 
 
         </FrameLayout>

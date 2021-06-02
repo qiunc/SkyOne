@@ -199,19 +199,25 @@ public class TcpClient {
      */
     public void sendByteCmd(final byte[] mBuffer, int requestCode) {
         this.requestCode = requestCode;
+        if (mOutputStream != null) {
+            new Thread(() -> {
+                sendByte(mBuffer);
+            }).start();
+        }
 
-        new Thread(() -> {
-            try {
-                if (mOutputStream != null) {
-                    mOutputStream.write(mBuffer);
-                    mOutputStream.flush();
-                }
-            } catch (IOException e) {
-                TcpClient.getInstance().disconnect();
-                e.printStackTrace();
-            }
-        }).start();
+    }
 
+    /**
+     * 设置流输出线程同步
+     */
+    private synchronized void sendByte(final byte[] mBuffer) {
+        try {
+            mOutputStream.write(mBuffer);
+            mOutputStream.flush();
+        } catch (IOException e) {
+            TcpClient.getInstance().disconnect();
+            e.printStackTrace();
+        }
     }
 
 

@@ -8,7 +8,6 @@ import com.blankj.utilcode.util.Utils
 import com.tj.skyone.utils.CrashHandler
 import com.tj.skyone.utils.UnCeHandler
 import com.yatoooon.screenadaptation.ScreenAdapterTools
-import java.lang.Exception
 
 
 /**
@@ -19,8 +18,10 @@ import java.lang.Exception
  */
 class GlobalApp : Application() {
 
+
     companion object {
         lateinit var instance: GlobalApp
+        var openTheSwitch: Boolean = false
     }
 
     override fun attachBaseContext(base: Context?) {
@@ -30,6 +31,7 @@ class GlobalApp : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        //全局功能开关
 
         //适配方案
         ScreenAdapterTools.init(this)

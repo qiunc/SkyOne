@@ -17,12 +17,9 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.google.gson.Gson;
 import com.tj.skyone.R;
 import com.tj.skyone.base.BaseFragment;
-import com.tj.skyone.bean.HomeBean;
-import com.tj.skyone.bean.HomeCheckBean;
 import com.tj.skyone.bean.LowvoltBean;
-import com.tj.skyone.bean.WaterBean;
+import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.HttpParam;
-import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
@@ -176,7 +173,7 @@ public class LowVoltageFragment extends BaseFragment {
 
     @OnClick({R.id.lw_alin, R.id.lw_blin, R.id.lw_clin})
     public void onViewClicked(View view) {
-        if (!NoDoubleClickUtils.isDoubleClick()) {
+        if (GlobalApp.Companion.getOpenTheSwitch()) {
             if (tags3) {
 
                 switch (view.getId()) {
@@ -230,7 +227,7 @@ public class LowVoltageFragment extends BaseFragment {
 
     @OnClick({R.id.tv_z, R.id.tv_j, R.id.tv_s, R.id.tv_o})
     public void onViewClickeds(View view) {
-        if (!NoDoubleClickUtils.isDoubleClick()) {
+        if (GlobalApp.Companion.getOpenTheSwitch()) {
             switch (view.getId()) {
                 case R.id.tv_z:
 

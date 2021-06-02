@@ -7,7 +7,7 @@ package com.tj.skyone.utils;
  */
 public class NoDoubleClickUtils {
     private static long lastClickTime;
-    private final static int SPACE_TIME = 500;
+    private final static int SPACE_TIME = 100;
 
     public static void initLastClickTime() {
         lastClickTime = 0;
@@ -18,6 +18,6 @@ public class NoDoubleClickUtils {
         boolean isClick2;
         isClick2 = currentTime - lastClickTime <= SPACE_TIME;
         lastClickTime = currentTime;
-        return isClick2;
+        return false;
     }
 }

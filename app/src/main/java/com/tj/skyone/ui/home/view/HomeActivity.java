@@ -1,8 +1,8 @@
 package com.tj.skyone.ui.home.view;
 
-import android.content.DialogInterface;
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -25,7 +25,7 @@ import com.tj.skyone.adapter.SaveStatePagerAdapter;
 import com.tj.skyone.base.BaseActivity;
 import com.tj.skyone.bean.HomeBean;
 import com.tj.skyone.bean.HomeCheckBean;
-import com.tj.skyone.bean.UserBean;
+import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.ui.home.fragment.DrainageFragment;
 import com.tj.skyone.ui.home.fragment.HighVoltageFragment;
 import com.tj.skyone.ui.home.fragment.HomeFragment;
@@ -38,7 +38,6 @@ import com.tj.skyone.utils.HttpParam;
 import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
-import com.tj.skyone.utils.eventbus.EventBusConsts;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
 import com.tj.skyone.widget.dialog.AboutDialog;
 import com.tj.skyone.widget.dialog.CreateUserDialog;
@@ -120,6 +119,7 @@ public class HomeActivity extends BaseActivity {
 
 
     private boolean onOff = false;
+
 
     @Override
     protected int getLayoutId() {
@@ -211,12 +211,13 @@ public class HomeActivity extends BaseActivity {
     @Subscribe()
     public void onEvent(AnyEventTypes event) {
         //解除加载等待框
-        getDialog().dismiss();
 
-        if (alertDialog!=null)alertDialog.dismiss();
+
+        //if (alertDialog != null) alertDialog.dismiss();
 
         //返回标识为temphumi  激活订阅事件
         if (StringUtils.equals("temphumi", event.getEventCode())) {
+            getDialog().dismiss();
 
             HomeBean bean = GsonUtils.fromJson(event.getAnyData().toString(), HomeBean.class);
             //设置主界面温度
@@ -232,27 +233,27 @@ public class HomeActivity extends BaseActivity {
 
                 if (i == 0) {
 
-                    imgYb.setImageResource(StringUtils.equals("1",String.valueOf(ch))?R.drawable.ovalsts:R.drawable.ovals);
+                    imgYb.setImageResource(StringUtils.equals("1", String.valueOf(ch)) ? R.drawable.ovalsts : R.drawable.ovals);
 
                 } else if (i == 1) {
 
-                    imgGps.setImageResource(StringUtils.equals("1",String.valueOf(ch))?R.drawable.ovalsts:R.drawable.ovals);
+                    imgGps.setImageResource(StringUtils.equals("1", String.valueOf(ch)) ? R.drawable.ovalsts : R.drawable.ovals);
 
                 } else if (i == 2) {
 
-                    imgGy.setImageResource(StringUtils.equals("1",String.valueOf(ch))?R.drawable.ovalsts:R.drawable.ovals);
+                    imgGy.setImageResource(StringUtils.equals("1", String.valueOf(ch)) ? R.drawable.ovalsts : R.drawable.ovals);
 
                 } else if (i == 3) {
 
-                    imgTf.setImageResource(StringUtils.equals("1",String.valueOf(ch))?R.drawable.ovalsts:R.drawable.ovals);
+                    imgTf.setImageResource(StringUtils.equals("1", String.valueOf(ch)) ? R.drawable.ovalsts : R.drawable.ovals);
 
                 } else if (i == 4) {
 
-                    imgZm.setImageResource(StringUtils.equals("1",String.valueOf(ch))?R.drawable.ovalsts:R.drawable.ovals);
+                    imgZm.setImageResource(StringUtils.equals("1", String.valueOf(ch)) ? R.drawable.ovalsts : R.drawable.ovals);
 
                 } else if (i == 5) {
 
-                    imgDy.setImageResource(StringUtils.equals("1",String.valueOf(ch))?R.drawable.ovalsts:R.drawable.ovals);
+                    imgDy.setImageResource(StringUtils.equals("1", String.valueOf(ch)) ? R.drawable.ovalsts : R.drawable.ovals);
 
                 }
 
@@ -261,48 +262,36 @@ public class HomeActivity extends BaseActivity {
 
         } else if (StringUtils.equals("homepage", event.getEventCode())) {
 
-            dismissLoadingDialog();
+            //dismissLoadingDialog();
 
             HomeCheckBean bean = GsonUtils.fromJson(event.getAnyData().toString(), HomeCheckBean.class);
-
+            Log.e("returnData", bean.getKey());
             if (StringUtils.equals("ON", bean.getKey())) {
+                getDialog().dismiss();
 
-                onOff = true;
-                btnOff.setImageResource(R.mipmap.home_btn_d);
+                if (!onOff) {
+                    onOff = true;
+                    GlobalApp.Companion.setOpenTheSwitch(true);
+                    btnOff.setImageResource(R.mipmap.home_btn_d);
 
+                } else {
+                    PubDialog dialog = new PubDialog(this, true, "关机确认", "有部件未到达原位，请检查设备后关机！！");
+                    dialog.show();
+                    dialog.img.setImageResource(R.mipmap.gj_icon);
+
+                    dialog.btn.setOnClickListener(view1 -> {
+                        dialog.dismiss();
+                    });
+                }
             } else {
-
+                getDialog().dismiss();
                 onOff = false;
+                GlobalApp.Companion.setOpenTheSwitch(false);
                 btnOff.setImageResource(R.mipmap.home_btn_ds);
+                viewPager.setCurrentItem(0);
+                showView(0);
 
             }
-
-        } else if (StringUtils.equals(EventBusConsts.UP_USER, event.getEventCode())) {//修改密码
-
-            getDialog().show();
-
-            UserBean bean = (UserBean) event.getAnyData();
-
-            HttpParam httpParam = new HttpParam();
-            httpParam.getMap().put("methodName", "alter");
-            httpParam.getMap().put("loginName", bean.getUser());
-            httpParam.getMap().put("loginPassword", bean.getPwd());
-
-
-            httpParam.getMap().put("dataLen", "end");
-
-            TcpClient.getInstance().sendChsPrtCmds(new Gson().toJson(httpParam.getMap()), 1001);
-
-
-        } else if (StringUtils.equals("alter", event.getEventCode())) {
-            getDialog().dismiss();
-
-            if (createUserDialog != null)
-                createUserDialog.dismiss();
-
-            PubDialog dialog = new PubDialog(this, true, "", "密码修改成功，请牢记新密码");
-            dialog.show();
-
 
         }
 
@@ -380,6 +369,7 @@ public class HomeActivity extends BaseActivity {
     private int mGravity = Gravity.START;
 
 
+    @SuppressLint("NonConstantResourceId")
     @OnClick({R.id.test, R.id.lin_tops, R.id.btn_off})
     public void onViewClicked(View view) {
 
@@ -391,77 +381,72 @@ public class HomeActivity extends BaseActivity {
 
                     if (onOff) {
 
-                        PubDialog dialog = new PubDialog(this, true, "关机确认", "有部件未到达原位，请检查设备后关机！！");
-                        dialog.show();
-                        dialog.img.setImageResource(R.mipmap.gj_icon);
+//                        PubDialog dialog = new PubDialog(this, true, "关机确认", "有部件未到达原位，请检查设备后关机！！");
+//                        dialog.show();
+//                        dialog.img.setImageResource(R.mipmap.gj_icon);
+//
+//                        dialog.btn.setOnClickListener(view1 -> {
+//                            dialog.dismiss();
 
-                        dialog.btn.setOnClickListener(view1 -> {
-                            dialog.dismiss();
+                        HttpParam httpParam = new HttpParam();
+                        httpParam.getMap().put("methodName", "homepage");
+                        httpParam.getMap().put("key", "OFF");
+                        httpParam.getMap().put("dataLen", "end");
 
-                            HttpParam httpParam = new HttpParam();
-                            httpParam.getMap().put("methodName", "homepage");
-                            httpParam.getMap().put("key", "OFF");
-                            httpParam.getMap().put("dataLen", "end");
+                        TcpClient.getInstance().sendChsPrtCmds(new Gson().toJson(httpParam.getMap()), 1001);
 
-                            TcpClient.getInstance().sendChsPrtCmds(new Gson().toJson(httpParam.getMap()), 1001);
+                        getDialog().show();
+//                            alertDialog = new AlertDialog.Builder(atys).create();
+//                            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+//                            alertDialog.setCancelable(false);
+//                            alertDialog.setOnKeyListener((dialog12, keyCode, event) -> {
+//                                return keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_BACK;
+//                            });
+//                            alertDialog.show();
+//                            alertDialog.setContentView(R.layout.loading_alert);
+//                            alertDialog.setCanceledOnTouchOutside(false);
 
-
-                            alertDialog = new AlertDialog.Builder(atys).create();
-                            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-                            alertDialog.setCancelable(false);
-                            alertDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
-                                @Override
-                                public boolean onKey(DialogInterface dialog12, int keyCode, KeyEvent event) {
-                                    if (keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_BACK)
-                                        return true;
-                                    return false;
-                                }
-                            });
-                            alertDialog.show();
-                            alertDialog.setContentView(R.layout.loading_alert);
-                            alertDialog.setCanceledOnTouchOutside(false);
-
-                        });
+//                        });
 
                     } else {
 
-                        PubDialog dialog = new PubDialog(this, true, "开机确认", "有部件未到达原位，请检查设备后开机！！");
-                        dialog.show();
-                        dialog.img.setImageResource(R.mipmap.gj_icon);
+//                        PubDialog dialog = new PubDialog(this, true, "开机确认", "有部件未到达原位，请检查设备后开机！！");
+//                        dialog.show();
+//                        dialog.img.setImageResource(R.mipmap.gj_icon);
+//
+//                        dialog.btn.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View view) {
+//
+//                                dialog.dismiss();
 
-                        dialog.btn.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
 
-                                dialog.dismiss();
+                        HttpParam httpParam = new HttpParam();
+                        httpParam.getMap().put("methodName", "homepage");
+                        httpParam.getMap().put("key", "ON");
 
+                        httpParam.getMap().put("dataLen", "end");
 
-                                HttpParam httpParam = new HttpParam();
-                                httpParam.getMap().put("methodName", "homepage");
-                                httpParam.getMap().put("key", "ON");
+                        TcpClient.getInstance().sendChsPrtCmds(new Gson().toJson(httpParam.getMap()), 1001);
 
-                                httpParam.getMap().put("dataLen", "end");
-
-                                TcpClient.getInstance().sendChsPrtCmds(new Gson().toJson(httpParam.getMap()), 1001);
-
-                                alertDialog = new AlertDialog.Builder(atys).create();
-                                alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-                                alertDialog.setCancelable(false);
-                                alertDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
-                                    @Override
-                                    public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-                                        if (keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_BACK)
-                                            return true;
-                                        return false;
-                                    }
-                                });
-                                alertDialog.show();
-                                alertDialog.setContentView(R.layout.loading_alert);
-                                alertDialog.setCanceledOnTouchOutside(false);
-                            }
-                        });
+                        getDialog().show();
+//                        alertDialog = new AlertDialog.Builder(atys).create();
+//                        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+//                        alertDialog.setCancelable(false);
+//                        alertDialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+//                            @Override
+//                            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+//                                return keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_BACK;
+//                            }
+//                        });
+//                        alertDialog.show();
+//                        alertDialog.setContentView(R.layout.loading_alert);
+//                        alertDialog.setCanceledOnTouchOutside(false);
+                        //                           }
+//                        });
                     }
                     break;
+
                 case R.id.test:
                     readyGo(RecordActivity.class);
                     break;
@@ -570,6 +555,7 @@ public class HomeActivity extends BaseActivity {
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8})
     public void onViewClickeds(View view) {
         if (!NoDoubleClickUtils.isDoubleClick()) {
@@ -583,8 +569,8 @@ public class HomeActivity extends BaseActivity {
 
                         viewPager.setCurrentItem(0);
                         showView(0);
-
                         break;
+
                     case R.id.btn2:
                         viewPager.setCurrentItem(1);
                         showView(1);

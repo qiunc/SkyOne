@@ -11,23 +11,17 @@ import androidx.annotation.Nullable;
 
 import com.blankj.utilcode.util.GsonUtils;
 import com.blankj.utilcode.util.StringUtils;
-import com.blankj.utilcode.util.ToastUtils;
 import com.google.gson.Gson;
 import com.tj.skyone.R;
 import com.tj.skyone.base.BaseFragment;
-import com.tj.skyone.bean.GroupBean;
-import com.tj.skyone.bean.RockerBean;
 import com.tj.skyone.bean.VentilationBean;
+import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.HttpParam;
-import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
 
 import org.greenrobot.eventbus.Subscribe;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -104,7 +98,7 @@ public class VentilationFragment extends BaseFragment {
     @OnClick({R.id.btn_f, R.id.btn_add, R.id.btn_on_off, R.id.btn_re})
     public void onViewClicked(View view) {
 
-        if (!NoDoubleClickUtils.isDoubleClick()) {
+        if (GlobalApp.Companion.getOpenTheSwitch()) {
             switch (view.getId()) {
                 case R.id.btn_f:
 

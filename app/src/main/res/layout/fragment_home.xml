@@ -8,10 +8,10 @@
 
     <TextView
         android:id="@+id/time"
-        android:layout_marginTop="190px"
-        android:textSize="190px"
+        android:layout_marginTop="72dp"
+        android:textSize="72sp"
         android:layout_gravity="center"
-        android:text="09:00"
+        android:text="00:00"
         android:textColor="@color/color_ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -27,25 +27,26 @@
         <TextView
             android:id="@+id/date"
             android:textColor="@color/color_2CB6B2"
-            android:textSize="33px"
+            android:textSize="12sp"
             android:text="2020/01/01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/dates"
-            android:layout_marginLeft="175px"
+            android:layout_marginLeft="66dp"
             android:textColor="@color/color_2CB6B2"
-            android:textSize="33px"
+            android:textSize="12sp"
             android:text="星期三"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="66dp" />
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="187px"
+        android:layout_marginTop="71dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -66,7 +67,7 @@
             <TextView
                 android:id="@+id/tv_a"
                 android:textColor="@color/color_2CB6B2"
-                android:textSize="80px"
+                android:textSize="30sp"
                 android:text="0℃"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -78,21 +79,23 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginLeft="300px"
+            android:layout_marginLeft="114dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="114dp">
+
             <ImageView
                 android:src="@mipmap/home_a"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_b"
                 android:textColor="@color/color_2CB6B2"
-                android:textSize="80px"
+                android:textSize="30sp"
                 android:text="0%"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
