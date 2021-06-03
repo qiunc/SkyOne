@@ -1,6 +1,7 @@
 package com.tj.skyone.ui.login
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -11,6 +12,7 @@ import com.blankj.utilcode.util.ToastUtils
 import com.google.gson.Gson
 import com.tj.skyone.R
 import com.tj.skyone.databinding.ActivityLoginBinding
+import com.tj.skyone.ui.GlobalApp
 import com.tj.skyone.ui.home.view.HomeActivity
 import com.tj.skyone.utils.TcpClient
 import com.tj.skyone.utils.eventbus.AnyEventTypes
@@ -24,6 +26,9 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (GlobalApp.isPad) {
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        }
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initEventData()

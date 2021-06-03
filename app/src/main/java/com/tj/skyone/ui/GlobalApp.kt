@@ -38,11 +38,7 @@ class GlobalApp : Application() {
         super.onCreate()
         instance = this
         //全局功能开关
-        val applicationInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
-        val metaData = applicationInfo.metaData
-        LogUtils.e(metaData.get("designwidth"))
-        metaData.putString("designwidth", "1920")
-        LogUtils.e(metaData.get("designwidth"))
+
         //适配方案
         ScreenAdapterTools.init(this)
         //初始化工具类

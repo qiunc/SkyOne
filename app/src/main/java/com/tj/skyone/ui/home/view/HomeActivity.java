@@ -124,7 +124,9 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        if(GlobalApp.Companion.isPad()) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
         return R.layout.activity_home;
     }
 
