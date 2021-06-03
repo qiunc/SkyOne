@@ -1,17 +1,27 @@
 package com.tj.skyone.ui.welcome.view
 
 import android.content.Intent
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ObjectUtils
 import com.blankj.utilcode.util.SPUtils
 import com.blankj.utilcode.util.ServiceUtils
 import com.tj.skyone.R
 import com.tj.skyone.service.MyService
 import com.tj.skyone.ui.home.view.ConfigActivity
+import com.tj.skyone.ui.home.view.HomeActivity
 import com.tj.skyone.ui.login.LoginActivity
 
 class WelcomeActivity : AppCompatActivity() {
+
+    override fun onStart() {
+        super.onStart()
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +44,7 @@ class WelcomeActivity : AppCompatActivity() {
 
 //            if (ObjectUtils.isEmpty(SPUtils.getInstance().getString("user",""))){
 
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
 
 //            }else{

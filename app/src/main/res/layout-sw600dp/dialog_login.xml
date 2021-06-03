@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@mipmap/dialog_bg"
+    android:layout_width="838px"
+    android:layout_height="351px">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_marginTop="5px"
+        android:layout_gravity="center|top"
+        android:textColor="#EDE8E0"
+        android:text=""
+        android:textSize="44px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_gravity="center"
+            android:src="@mipmap/x_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_marginLeft="30px"
+            android:layout_gravity="center"
+            android:text="账号或密码输入错误，请重新输入"
+            android:textSize="36px"
+            android:textColor="@color/color_ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="30px"
+        android:text="确定"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/ok"
+        android:layout_marginLeft="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="left|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="30px"
+        android:text="取消"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+</FrameLayout>

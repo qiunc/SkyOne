@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingLeft="105px"
+    android:paddingRight="95px"
+    android:background="@color/color_383838"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    
+    
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@mipmap/t_ra_show"
+        android:layout_width="675px"
+        android:layout_height="617px" />
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="110px"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_marginLeft="10px"
+            android:gravity="center"
+            android:textSize="44px"
+            android:layout_gravity="center"
+            android:text="A组"
+            android:textColor="@color/color_EDE8E0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/r1"
+            android:overScrollMode="never"
+            android:layout_width="224px"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_marginLeft="10px"
+            android:gravity="center"
+            android:textSize="44px"
+            android:layout_gravity="center"
+            android:text="B组"
+            android:textColor="@color/color_EDE8E0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/r2"
+            android:overScrollMode="never"
+            android:layout_width="224px"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="90px"
+        android:layout_marginTop="50px"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btn_a"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/btn_bg"
+            android:textSize="34px"
+            android:text="全选"
+            android:layout_width="220px"
+            android:layout_height="78px" />
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btn_c"
+            android:layout_marginTop="30px"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/btn_bg"
+            android:textSize="34px"
+            android:text="取消"
+            android:layout_width="220px"
+            android:layout_height="78px"  />
+
+
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:id="@+id/lin_top"
+            android:background="@drawable/group_f"
+            android:layout_marginTop="60px"
+            android:layout_width="220px"
+            android:layout_height="78px"  >
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/top_icon"
+                android:layout_width="42px"
+                android:layout_height="37px" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_go"
+            android:layout_gravity="center"
+            android:background="@drawable/group_t"
+            android:layout_marginTop="30px"
+            android:layout_width="220px"
+            android:layout_height="78px"  >
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/go_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginLeft="20px"
+                android:layout_gravity="center"
+                android:src="@mipmap/go_icon"
+                android:layout_width="23px"
+                android:layout_height="36px" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/btn_bottom"
+            android:layout_marginTop="30px"
+            android:layout_gravity="center"
+            android:background="@drawable/group_f"
+            android:layout_width="220px"
+            android:layout_height="78px"  >
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/bottom_icon"
+                android:layout_width="42px"
+                android:layout_height="37px" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="80px"
+            android:orientation="horizontal"
+            android:layout_width="225px"
+            android:background="@color/color_383838"
+            android:layout_height="97px">
+
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="225px"
+                    android:layout_height="97px" />
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="23px"
+                    android:text=""
+                    android:textSize="25px"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

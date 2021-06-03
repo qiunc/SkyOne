@@ -2,6 +2,7 @@ package com.tj.skyone.ui.home.view;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -123,6 +124,7 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         return R.layout.activity_home;
     }
 

@@ -35,16 +35,20 @@
         <activity android:name=".ui.home.view.HomeActivity"
             android:windowSoftInputMode="adjustPan"
             android:configChanges="orientation|screenSize|keyboardHidden|fontScale"
-            />
+            >
+
+        </activity>
         <activity
             android:name=".ui.home.view.GlobalActivity"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-        <activity android:name=".ui.home.view.ConfigActivity" />
+
+        <activity android:name=".ui.home.view.ConfigActivity"
+            />
 
         <meta-data
             android:name="designwidth"
-            android:value="1080" />
+            android:value="1920" />
         <meta-data
             android:name="designdpi"
             android:value="480" />
@@ -60,7 +64,6 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

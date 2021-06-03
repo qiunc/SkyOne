@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@mipmap/user_bgs"
+    android:layout_width="780px"
+    android:layout_height="521px">
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="10px"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#EDE8E0"
+            android:text="创建新用户"
+            android:textSize="44px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="#2CB6B2"
+                android:text="账       户："
+                android:textSize="30px"
+                android:layout_width="200px"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginLeft="10px"
+                android:paddingLeft="27px"
+                android:id="@+id/et_phone"
+                android:layout_width="400px"
+                android:layout_height="66px"
+                android:background="@mipmap/edt_bg"
+                android:gravity="center_vertical"
+                android:hint="请输入用户名"
+                android:inputType="text"
+                android:textColor="#3B3F41"
+                android:textColorHint="@color/color_989898"
+                android:textSize="30px" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_pwd"
+                android:layout_gravity="center"
+                android:textColor="#2CB6B2"
+                android:text="密       码："
+                android:textSize="30px"
+                android:layout_width="200px"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginLeft="10px"
+                android:paddingLeft="27px"
+                android:id="@+id/et_pwd"
+                android:layout_width="400px"
+                android:layout_height="66px"
+                android:background="@mipmap/edt_bg"
+                android:gravity="center_vertical"
+                android:hint="请输入4到8位字符"
+                android:maxLength="8"
+                android:inputType="textPassword"
+                android:textColor="#3B3F41"
+                android:textColorHint="@color/color_989898"
+                android:textSize="30px" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="#2CB6B2"
+                android:text="确认密码："
+                android:textSize="30px"
+                android:layout_width="200px"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginLeft="10px"
+                android:paddingLeft="27px"
+                android:id="@+id/et_pwd_to"
+                android:layout_width="400px"
+                android:layout_height="66px"
+                android:background="@mipmap/edt_bg"
+                android:gravity="center_vertical"
+                android:hint="两次密码请保持一致"
+                android:maxLength="8"
+                android:inputType="textPassword"
+                android:textColor="#3B3F41"
+                android:textColorHint="@color/color_989898"
+                android:textSize="30px" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/btn1"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="30px"
+        android:text="确定"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/btn2"
+        android:layout_marginLeft="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="left|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="30px"
+        android:text="取消"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+</FrameLayout>

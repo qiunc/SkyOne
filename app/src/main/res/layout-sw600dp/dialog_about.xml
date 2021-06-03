@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@mipmap/ab_bg"
+    android:layout_width="780px"
+    android:layout_height="495px">
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="5px"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#EDE8E0"
+            android:text="关于我们"
+            android:textSize="44px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+<!--        <LinearLayout-->
+<!--            android:visibility="visible"-->
+<!--            android:layout_marginLeft="25px"-->
+<!--            android:layout_marginTop="50px"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <TextView-->
+<!--                android:textColor="#2CB6B2"-->
+<!--                android:text="联系电话："-->
+<!--                android:textSize="37px"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <TextView-->
+<!--                android:textColor="#EDE8E0"-->
+<!--                android:text="021-52231891"-->
+<!--                android:textSize="37px"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:visibility="visible"-->
+<!--            android:layout_marginLeft="25px"-->
+<!--            android:layout_marginTop="50px"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <TextView-->
+<!--                android:textColor="#2CB6B2"-->
+<!--                android:text="公司地址："-->
+<!--                android:textSize="37px"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <TextView-->
+<!--                android:textColor="#EDE8E0"-->
+<!--                android:text="上海市闵行区七宝宝龙城T3-5楼"-->
+<!--                android:textSize="37px"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+
+<!--        </LinearLayout>-->
+
+
+
+        <!--非公司模块-->
+        <LinearLayout
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#2CB6B2"
+                android:text="联系电话："
+                android:textSize="37px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#EDE8E0"
+                android:text="18016003409 舒美月"
+                android:textSize="37px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#2CB6B2"
+                android:text="电子邮箱："
+                android:textSize="37px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#EDE8E0"
+                android:text="820761303@qq.com"
+                android:textSize="37px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="50px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#2CB6B2"
+                android:text="公司网站："
+                android:textSize="37px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#EDE8E0"
+                android:text="www.liangjiaosy.com"
+                android:textSize="37px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="30px"
+        android:text="退出"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+</FrameLayout>

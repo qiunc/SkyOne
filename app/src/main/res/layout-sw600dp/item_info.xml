@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginLeft="11px"
+        android:layout_marginTop="11px"
+        android:layout_width="311px"
+        android:layout_height="142px"
+        android:orientation="horizontal"
+        android:background="@mipmap/inf_b_bg">
+
+        <TextView
+            android:layout_marginLeft="15px"
+            android:layout_gravity="center"
+            android:id="@+id/name"
+            android:textSize="33px"
+            android:textColor="@color/color_ffffff"
+            android:layout_width="50px"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/four"
+            android:layout_marginLeft="10px"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="226px"
+            android:layout_height="116px">
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/four_a"
+                    android:background="@drawable/info_bg_left_top"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/four_c"
+                    android:background="@drawable/info_bg_left_botton"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/four_b"
+                    android:background="@drawable/info_bg_right_top"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/four_d"
+                    android:background="@drawable/info_bg_right_bottom"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/mgt_bg"
+    android:layout_width="1000px"
+    android:layout_height="1200px">
+
+
+
+    <FrameLayout
+        android:background="@drawable/mgt_bg_top"
+        android:layout_width="match_parent"
+        android:layout_height="70px">
+
+        <TextView
+            android:layout_marginTop="5px"
+            android:layout_gravity="center|top"
+            android:textColor="#EDE8E0"
+            android:text="管理用户"
+            android:textSize="44px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </FrameLayout>
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70px">
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@mipmap/u_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="29px"
+                    android:textSize="29px"
+                    android:textColor="@color/white"
+                    android:text="当前用户"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="29px"
+                    android:textSize="29px"
+                    android:textColor="#6BC6E4"
+                    android:text="ADMIN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="29px"
+                android:textSize="29px"
+                android:textColor="@color/white"
+                android:text="用户类型"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="29px"
+                android:textSize="29px"
+                android:textColor="#6BC6E4"
+                android:text="管理员"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        </FrameLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_marginRight="1px"
+            android:layout_marginLeft="1px"
+            android:background="#727E7E"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70px">
+
+
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="29px"
+                android:textColor="#6BC6E4"
+                android:text="编号"
+                android:layout_width="120px"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#3B3E3F"
+                android:layout_width="1px"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="29px"
+                android:textColor="#6BC6E4"
+                android:text="账号"
+                android:singleLine="true"
+                android:layout_width="300px"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#3B3E3F"
+                android:layout_width="1px"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="29px"
+                android:textColor="#6BC6E4"
+                android:text="用户类型"
+                android:singleLine="true"
+                android:layout_width="300px"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:background="#3B3E3F"
+                android:layout_width="1px"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="29px"
+                android:textColor="#6BC6E4"
+                android:text="修改用户"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <View
+            android:background="#3B3E3F"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="1"
+        android:layout_marginLeft="1px"
+        android:layout_marginRight="1px"
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:layout_marginTop="10px"
+        android:id="@+id/btn"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="37px"
+        android:text="退出"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+</LinearLayout>

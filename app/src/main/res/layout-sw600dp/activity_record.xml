@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#313333"
+    tools:context=".ui.home.view.RecordActivity">
+
+    <FrameLayout
+        android:background="#2CB6B2"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+
+        <LinearLayout
+            android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="30px"
+            android:paddingRight="80px">
+
+            <!-- 左边图片 -->
+            <ImageView
+                android:id="@+id/left_img"
+                android:layout_width="25px"
+                android:layout_height="47px"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_left" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="#EDE8E0"
+            android:text="设备记录列表"
+            android:textSize="44px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginRight="1px"
+        android:layout_marginLeft="1px"
+        android:background="#313333"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70px">
+
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="29px"
+            android:textColor="#6BC6E4"
+            android:text="编号"
+            android:layout_width="120px"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#A4A4A4"
+            android:layout_width="1px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="29px"
+            android:textColor="#6BC6E4"
+            android:text="信息详细记录"
+            android:singleLine="true"
+            android:layout_width="300px"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#A4A4A4"
+            android:layout_width="1px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="29px"
+            android:textColor="#6BC6E4"
+            android:text="操作员"
+            android:singleLine="true"
+            android:layout_width="230px"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="#A4A4A4"
+            android:layout_width="1px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="29px"
+            android:textColor="#6BC6E4"
+            android:text="记录时间"
+            android:singleLine="true"
+            android:layout_width="250px"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:background="#A4A4A4"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="1"
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

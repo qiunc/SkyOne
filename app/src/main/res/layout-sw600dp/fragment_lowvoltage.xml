@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingLeft="105px"
+    android:paddingRight="30px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/t_ra_show"
+            android:layout_width="675px"
+            android:layout_height="617px" />
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginLeft="50px"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="175px"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/low_bg_top"
+            android:layout_width="474px"
+            android:layout_height="214px">
+
+            <TextView
+                android:id="@+id/ac_dc"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30px"
+                android:textColor="@color/color_383838"
+                android:textSize="80px"
+                android:text="DC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+<!--                <TextView-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:layout_marginLeft="100px"-->
+<!--                    android:textColor="@color/color_383838"-->
+<!--                    android:textSize="124px"-->
+<!--                    android:text="0.0"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content" />-->
+
+
+                <EditText
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="100px"
+                    android:id="@+id/et_unit_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:digits="0123456789."
+                    android:gravity="center_vertical"
+                    android:hint="0.0"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:singleLine="true"
+                    android:textColor="@color/color_383838"
+                    android:textColorHint="@color/color_383838"
+                    android:textSize="60px" />
+
+                <TextView
+                    android:layout_marginLeft="10px"
+                    android:textColor="@color/color_383838"
+                    android:textSize="80px"
+                    android:text="V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="50px"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_s"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/group_f"
+            android:textSize="43px"
+            android:text="锁定电压"
+            android:layout_width="235px"
+            android:layout_height="106px" />
+
+        <TextView
+            android:id="@+id/tv_o"
+            android:layout_marginLeft="140px"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/btn_bg"
+            android:textSize="43px"
+            android:text="确认输出"
+            android:layout_width="235px"
+            android:layout_height="106px" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/lw_alin"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/color_ffffff"
+                android:layout_gravity="center"
+                android:text="A组"
+                android:textSize="41px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/lw_a"
+                android:layout_marginTop="10px"
+                android:layout_gravity="center"
+                android:src="@mipmap/off_iocn_ms"
+                android:layout_width="243px"
+                android:layout_height="136px" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lw_blin"
+            android:layout_marginLeft="60px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/color_ffffff"
+                android:layout_gravity="center"
+                android:text="B组"
+                android:textSize="41px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/lw_b"
+                android:layout_marginTop="10px"
+                android:layout_gravity="center"
+                android:src="@mipmap/off_iocn_ms"
+                android:layout_width="243px"
+                android:layout_height="136px"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="60px"
+            android:id="@+id/lw_clin"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/color_ffffff"
+                    android:layout_gravity="center"
+                    android:text="老师"
+                    android:textSize="41px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:id="@+id/lw_c"
+                    android:layout_marginTop="10px"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/off_iocn_ms"
+                    android:layout_width="243px"
+                    android:layout_height="136px"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="50px"
+                android:layout_marginTop="175px"
+                android:layout_gravity="top|right"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_z"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/color_ffffff"
+                    android:background="@drawable/group_t"
+                    android:textSize="43px"
+                    android:text="直流"
+                    android:layout_width="228px"
+                    android:layout_height="99px" />
+
+                <TextView
+                    android:layout_marginTop="30px"
+                    android:id="@+id/tv_j"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/color_ffffff"
+                    android:background="@drawable/group_f"
+                    android:textSize="43px"
+                    android:text="交流"
+                    android:layout_width="228px"
+                    android:layout_height="99px" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+</LinearLayout>
