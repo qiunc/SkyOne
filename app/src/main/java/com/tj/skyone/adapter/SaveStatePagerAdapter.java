@@ -9,16 +9,18 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
+import java.util.Objects;
 
 /**
  * fragment管理适配器
  */
 public class SaveStatePagerAdapter extends PagerAdapter {
 
-    private List<Fragment> fragments;
-    private FragmentManager fragmentManager;
-    private ViewPager viewPager;
+    private final List<Fragment> fragments;
+    private final FragmentManager fragmentManager;
     private int currentPageIndex = 0;
 
     private OnExtraPageChangeListener onExtraPageChangeListener;
@@ -26,9 +28,8 @@ public class SaveStatePagerAdapter extends PagerAdapter {
     public SaveStatePagerAdapter(FragmentManager fragmentManager, ViewPager viewPager, List<Fragment> fragments) {
         this.fragments = fragments;
         this.fragmentManager = fragmentManager;
-        this.viewPager = viewPager;
-        this.viewPager.setAdapter(this);
-        this.viewPager.addOnPageChangeListener(mOnPageChangeListener);
+        viewPager.setAdapter(this);
+        viewPager.addOnPageChangeListener(mOnPageChangeListener);
     }
 
     @Override
@@ -46,8 +47,9 @@ public class SaveStatePagerAdapter extends PagerAdapter {
         container.removeView(fragments.get(position).getView()); // 移出viewpager两边之外的page布局
     }
 
+    @NotNull
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(@NotNull ViewGroup container, int position) {
         Fragment fragment = fragments.get(position);
         if (!fragment.isAdded()) {
             FragmentTransaction ft = fragmentManager.beginTransaction();
@@ -61,27 +63,27 @@ public class SaveStatePagerAdapter extends PagerAdapter {
             fragmentManager.executePendingTransactions();
         }
 
-        if (fragment.getView().getParent() == null) {
+        if (Objects.requireNonNull(fragment.getView()).getParent() == null) {
             container.addView(fragment.getView());
         }
 
         return fragment.getView();
     }
+//
+//    public int getCurrentPageIndex() {
+//        return currentPageIndex;
+//    }
+//
+//    public OnExtraPageChangeListener getOnExtraPageChangeListener() {
+//        return onExtraPageChangeListener;
+//    }
+//
+//    public void setOnExtraPageChangeListener(
+//            OnExtraPageChangeListener onExtraPageChangeListener) {
+//        this.onExtraPageChangeListener = onExtraPageChangeListener;
+//    }
 
-    public int getCurrentPageIndex() {
-        return currentPageIndex;
-    }
-
-    public OnExtraPageChangeListener getOnExtraPageChangeListener() {
-        return onExtraPageChangeListener;
-    }
-
-    public void setOnExtraPageChangeListener(
-            OnExtraPageChangeListener onExtraPageChangeListener) {
-        this.onExtraPageChangeListener = onExtraPageChangeListener;
-    }
-
-    private ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
+    private final ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int arg0) {

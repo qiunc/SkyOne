@@ -22,22 +22,15 @@ class WelcomeActivity : AppCompatActivity() {
 
 
         if (ObjectUtils.isEmpty(SPUtils.getInstance().getString("ip"))||ObjectUtils.isEmpty(SPUtils.getInstance().getString("port"))) {
-
-//            val intent = Intent(this, LoginActivity::class.java)
             val intent = Intent(this, ConfigActivity::class.java)
             startActivity(intent)
-
         }else{
-
-
             try {
                 if (!ServiceUtils.isServiceRunning(MyService::class.java))
                     ServiceUtils.startService(MyService::class.java)
             } catch (e: Exception) {
                 e.printStackTrace()
             }
-
-
 
 //            if (ObjectUtils.isEmpty(SPUtils.getInstance().getString("user",""))){
 

@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -210,7 +211,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
     }
 
     //获取布局id
-    protected abstract int getLayoutId();
+    protected abstract @LayoutRes int  getLayoutId();
 
     //获取沉淀式布局
 //    protected abstract View getStatusBarView();

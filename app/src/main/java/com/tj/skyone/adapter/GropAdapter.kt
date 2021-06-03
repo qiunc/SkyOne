@@ -23,19 +23,19 @@ class GropAdapter : MyBaseQuickAdapter<GroupBean, BaseViewHolder>(R.layout.item_
         name.text = item.name
 
 
-        if (item.isTag == true && item.isSelect  == true){
+        if (item.isTag && item.isSelect){
 
             img.setBackgroundResource(R.mipmap.gg_icon)
 
-        }else if (item.isTag == true && item.isSelect  == false){
+        }else if (item.isTag && !item.isSelect){
 
             img.setBackgroundResource(R.mipmap.b_g_icon)
 
-        }else if (item.isTag == false && item.isSelect == false){
+        }else if (!item.isTag && !item.isSelect){
 
             img.setBackgroundResource(R.mipmap.b_icon)
 
-        }else if (item.isTag == false && item.isSelect == true){
+        }else if (!item.isTag && item.isSelect){
 
             img.setBackgroundResource(R.mipmap.g_icon)
 

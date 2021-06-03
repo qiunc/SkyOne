@@ -52,7 +52,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-
+@SuppressLint("NonConstantResourceId")
 public class HomeActivity extends BaseActivity {
 
     @BindView(R.id.img_yb)
@@ -100,8 +100,8 @@ public class HomeActivity extends BaseActivity {
     ImageView btnRight;
     @BindView(R.id.btn_off)
     ImageView btnOff;
-    private List<Fragment> fragmentList;
-    private List<LinearLayout> linearLayoutList = new ArrayList<>();
+    private List<LinearLayout> linearLayoutList;
+    List<Fragment> fragmentList;
 
     @BindView(R.id.mViewPager)
     ViewPager viewPager;
@@ -143,7 +143,7 @@ public class HomeActivity extends BaseActivity {
 
 
         fragmentList = new ArrayList<>();
-
+        linearLayoutList = new ArrayList<>();
         homeFragment = new HomeFragment();//首页
         rockerArmFragment = new RockerArmFragment();//摇臂
         drainageFragment = new DrainageFragment();//给排水
@@ -330,7 +330,10 @@ public class HomeActivity extends BaseActivity {
 
     }
 
-
+    /**
+     * 底部菜单切换高亮
+     * @param i 菜单下标
+     */
     private void showView(int i) {
 
         if (i == 0) {
@@ -543,7 +546,9 @@ public class HomeActivity extends BaseActivity {
 
                         });
 
-                        dialog1.ok.setOnClickListener(view151 -> dialog1.dismiss());
+                        dialog1.ok.setOnClickListener(view151 -> {
+                            dialog1.dismiss();
+                        });
 
 
                     });

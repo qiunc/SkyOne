@@ -22,6 +22,7 @@ class GlobalApp : Application() {
     companion object {
         lateinit var instance: GlobalApp
         var openTheSwitch: Boolean = false
+        var isPad: Boolean = false
     }
 
     override fun attachBaseContext(base: Context?) {
