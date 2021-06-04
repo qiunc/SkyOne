@@ -15,11 +15,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.widget.dialog.LoadingDialog;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
+
+import java.util.Objects;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.jessyan.autosize.AutoSize;
+import me.jessyan.autosize.internal.CustomAdapt;
 
 /**
  * @describe fragment基类
@@ -27,7 +31,7 @@ import butterknife.Unbinder;
  * @time 2018/8/8 10:14
  * @email wudq@infore.com
  */
-public abstract class BaseFragment extends Fragment implements  IBaseFragmentView,IBaseView {
+public abstract class BaseFragment extends Fragment implements IBaseFragmentView, IBaseView, CustomAdapt {
 
     protected View mContentView;
     protected Activity mActivity;
@@ -64,6 +68,11 @@ public abstract class BaseFragment extends Fragment implements  IBaseFragmentVie
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if(GlobalApp.Companion.isPad()) {
+            AutoSize.autoConvertDensity(Objects.requireNonNull(getActivity()), 900, true);
+        } else {
+            AutoSize.autoConvertDensity(Objects.requireNonNull(getActivity()), 392, true);
+        }
         setBaseView(inflater, bindLayout());
         return mContentView;
     }
@@ -72,9 +81,10 @@ public abstract class BaseFragment extends Fragment implements  IBaseFragmentVie
     protected void setBaseView(@NonNull LayoutInflater inflater, @LayoutRes int layoutId) {
         if (layoutId <= 0) return;
         mContentView = inflater.inflate(layoutId, null);
-        butterKnife = ButterKnife.bind(this, mContentView);
         //适配Fragment
-        ScreenAdapterTools.getInstance().loadView(mContentView);
+        //ScreenAdapterTools.getInstance().loadView(mContentView);
+        butterKnife = ButterKnife.bind(this, mContentView);
+
     }
 
     @Override
@@ -95,7 +105,7 @@ public abstract class BaseFragment extends Fragment implements  IBaseFragmentVie
 
     @Override
     public void onDestroyView() {
-        if (mContentView != null && (ViewGroup)mContentView.getParent() != null) {
+        if (mContentView != null && (ViewGroup) mContentView.getParent() != null) {
             ((ViewGroup) mContentView.getParent()).removeView(mContentView);
         }
         super.onDestroyView();
@@ -201,5 +211,17 @@ public abstract class BaseFragment extends Fragment implements  IBaseFragmentVie
         startActivity(intent);
     }
 
+    @Override
+    public boolean isBaseOnWidth() {
+        return true;
+    }
 
+    @Override
+    public float getSizeInDp() {
+        if (GlobalApp.Companion.isPad()) {
+            return (float) 900.0;
+        } else {
+            return (float) 392.0;
+        }
+    }
 }

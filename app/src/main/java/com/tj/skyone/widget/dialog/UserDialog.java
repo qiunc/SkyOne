@@ -7,11 +7,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDialog;
 
 import com.tj.skyone.R;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  *
@@ -33,7 +31,6 @@ public class UserDialog extends AppCompatDialog {
 
 
         setContentView(R.layout.dialog_user);
-        ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
         this.setCancelable(false);
         ButterKnife.bind(this);
 

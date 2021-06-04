@@ -13,7 +13,6 @@ import com.blankj.utilcode.util.SPUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.tj.skyone.R
 import com.tj.skyone.utils.TcpClient
-import com.yatoooon.screenadaptation.ScreenAdapterTools
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -22,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_global2.*
 import java.nio.charset.Charset
 import java.util.concurrent.TimeUnit
 
-class GlobalActivity : AppCompatActivity() {
+class GlobalActivity : AppCompatActivity(){
 
 
     private var heartbeat: Disposable? = null
@@ -35,7 +34,6 @@ class GlobalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_global2)
 
-        ScreenAdapterTools.getInstance().loadView(window.decorView)
 
 
         //防止Home按键app重启

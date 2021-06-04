@@ -14,7 +14,6 @@ import com.tj.skyone.bean.UserBean;
 import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.eventbus.EventBusConsts;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,7 +49,6 @@ public class CreateUserDialog extends AppCompatDialog {
 
 
         setContentView(R.layout.dialog_user_add);
-        ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
         this.setCancelable(false);
         ButterKnife.bind(this);
 

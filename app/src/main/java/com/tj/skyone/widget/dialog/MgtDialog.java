@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.tj.skyone.R;
 import com.tj.skyone.adapter.MgtAdapter;
 import com.tj.skyone.bean.MgtBean;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +36,6 @@ public class MgtDialog extends AppCompatDialog {
 
         setContentView(R.layout.dialog_mgt);
         ButterKnife.bind(this);
-        ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
         this.setCancelable(false);
 
         mgtAdapter = new MgtAdapter();

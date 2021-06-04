@@ -14,18 +14,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.blankj.utilcode.util.ServiceUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.tj.skyone.service.MyService;
+import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.widget.dialog.LoadingDialog;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.jessyan.autosize.internal.CustomAdapt;
 
 /**
  * description: Activity基类
  * Created by wdq
  * date: 2017/12/26  15:23
  */
-public abstract class BaseActivity extends AppCompatActivity implements IBaseView {
+public abstract class BaseActivity extends AppCompatActivity implements IBaseView, CustomAdapt {
 
     private boolean isButterKnife = true;
     private boolean isStart = true;
@@ -44,7 +45,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         //防止Home按键app重启
         if (!isTaskRoot()) {
             Intent intent = getIntent();
@@ -60,8 +60,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
             setContentView(getLayoutId());
             atys = this;
             butterKnife = ButterKnife.bind(this);
-            //Activity适配
-            ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
+//            ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
 
             getBundle(savedInstanceState);
 
@@ -208,6 +207,20 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
         config.setToDefaults();
         res.updateConfiguration(config, res.getDisplayMetrics());
         return res;
+    }
+
+    @Override
+    public boolean isBaseOnWidth() {
+        return true;
+    }
+
+    @Override
+    public float getSizeInDp() {
+        if (GlobalApp.Companion.isPad()) {
+            return (float) 900.0;
+        } else {
+            return (float) 392.0;
+        }
     }
 
     //获取布局id

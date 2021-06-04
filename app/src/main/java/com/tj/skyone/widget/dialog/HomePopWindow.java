@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
 import com.tj.skyone.R;
-import com.tj.skyone.ui.GlobalApp;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 
 /**
@@ -21,24 +19,18 @@ import com.yatoooon.screenadaptation.ScreenAdapterTools;
  */
 public class HomePopWindow extends PopupWindow {
 
-    public View view1,view2,view3,view4,view5;
+    public View view1, view2, view3, view4, view5;
 
     public HomePopWindow(Context context) {
         super(context);
-        if(GlobalApp.Companion.isPad()) {
-            setHeight(ScreenAdapterTools.getInstance().loadCustomAttrValue(739));
-            setWidth(ScreenAdapterTools.getInstance().loadCustomAttrValue(345));
-        } else {
-            setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-            setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
-        }
+        setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+        setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
 
         setOutsideTouchable(true);
         setFocusable(true);
         setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_home_s, null, false);
         setContentView(contentView);
-        ScreenAdapterTools.getInstance().loadView(contentView);
 
 
         view1 = contentView.findViewById(R.id.time);

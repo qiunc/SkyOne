@@ -3,7 +3,6 @@ package com.tj.skyone.adapter
 import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.yatoooon.screenadaptation.ScreenAdapterTools
 
 
 /**
@@ -18,7 +17,7 @@ abstract class MyBaseQuickAdapter<T, VH : BaseViewHolder> : BaseQuickAdapter<T, 
     constructor(layoutResId: Int, data: MutableList<T>?) : super(layoutResId, data)
 
     override fun onItemViewHolderCreated(viewHolder: VH, viewType: Int) {
-        ScreenAdapterTools.getInstance().loadView(viewHolder.itemView)  //屏幕适配
+        //ScreenAdapterTools.getInstance().loadView(viewHolder.itemView)  //屏幕适配
         super.onItemViewHolderCreated(viewHolder, viewType)
     }
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import androidx.appcompat.app.AppCompatDialog;
 
 import com.tj.skyone.R;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 /**
  * 使用说明对话框
@@ -20,7 +19,6 @@ public class UseDialog extends AppCompatDialog {
 
 
         setContentView(R.layout.dialog_use);
-        ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
         this.setCancelable(false);
 
         findViewById(R.id.btn).setOnClickListener(view -> dismiss());

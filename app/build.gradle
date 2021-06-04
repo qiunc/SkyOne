@@ -61,7 +61,7 @@ dependencies {
 
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
-
+    implementation 'me.jessyan:autosize:1.2.1'
 
 //    implementation  'com.squareup.okhttp3:okhttp:3.9.1'
 //    implementation  'com.squareup.okhttp3:logging-interceptor:3.4.1'

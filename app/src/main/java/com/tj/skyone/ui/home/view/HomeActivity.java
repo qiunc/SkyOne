@@ -2,7 +2,6 @@ package com.tj.skyone.ui.home.view;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -53,8 +52,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import me.jessyan.autosize.internal.CustomAdapt;
+
 @SuppressLint("NonConstantResourceId")
-public class HomeActivity extends BaseActivity {
+public class HomeActivity extends BaseActivity implements CustomAdapt {
 
     @BindView(R.id.img_yb)
     ImageView imgYb;
@@ -124,9 +125,11 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        if(GlobalApp.Companion.isPad()) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
+//        if(GlobalApp.Companion.isPad()) {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        } else {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        }
         return R.layout.activity_home;
     }
 
@@ -661,4 +664,17 @@ public class HomeActivity extends BaseActivity {
         }
     }
 
+    @Override
+    public boolean isBaseOnWidth() {
+        return true;
+    }
+
+    @Override
+    public float getSizeInDp() {
+        if(GlobalApp.Companion.isPad()) {
+            return 900.0f;
+        }else {
+            return 320.0f;
+        }
+    }
 }

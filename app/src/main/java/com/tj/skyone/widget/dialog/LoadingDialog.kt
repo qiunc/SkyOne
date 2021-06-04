@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatDialog
 import com.blankj.utilcode.util.StringUtils
 import com.tj.skyone.R
-import com.yatoooon.screenadaptation.ScreenAdapterTools
 
 class LoadingDialog : AppCompatDialog {
 
@@ -32,7 +31,6 @@ class LoadingDialog : AppCompatDialog {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_loading_to)
-        ScreenAdapterTools.getInstance().loadView(window?.decorView)
 //        ivLoding = findViewById(R.id.iv_loding)
         titleTextView = findViewById(R.id.loading_text)
         titleTextView?.text = title

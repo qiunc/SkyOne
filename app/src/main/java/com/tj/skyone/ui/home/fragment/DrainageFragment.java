@@ -66,7 +66,7 @@ public class DrainageFragment extends BaseFragment {
     private GropAdapter gropAdapter1;
     private GropAdapter gropAdapter2;
 
-    private boolean offOnTag = true;//默认关闭
+    private boolean offOnTag = false;//默认关闭
     private boolean tags = false;
 
     private Integer rRuns = -1;
@@ -236,9 +236,9 @@ public class DrainageFragment extends BaseFragment {
         httpParam.getMap().put("methodName","water");
         httpParam.getMap().put("w_Agroup",r_Agroup);
         httpParam.getMap().put("w_Bgroup",r_Bgroup);
-        httpParam.getMap().put("w_key",offOnTag == true?"1":"0");
+        httpParam.getMap().put("w_key", offOnTag ?"1":"0");
         httpParam.getMap().put("w_drain",w_drain);
-        httpParam.getMap().put("w_type",tags == true ?"1":0);
+        httpParam.getMap().put("w_type", tags ?"1":0);
 
         httpParam.getMap().put("dataLen", "end");
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import androidx.appcompat.app.AppCompatDialog;
 
 import com.tj.skyone.R;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 import butterknife.ButterKnife;
 
@@ -21,7 +20,6 @@ public class AboutDialog extends AppCompatDialog {
 
 
         setContentView(R.layout.dialog_about);
-        ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
         this.setCancelable(false);
         ButterKnife.bind(this);
 

@@ -1,8 +1,8 @@
 package com.tj.skyone.ui.login
 
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
@@ -12,25 +12,27 @@ import com.blankj.utilcode.util.ToastUtils
 import com.google.gson.Gson
 import com.tj.skyone.R
 import com.tj.skyone.databinding.ActivityLoginBinding
-import com.tj.skyone.ui.GlobalApp
+import com.tj.skyone.ui.GlobalApp.Companion.isPad
 import com.tj.skyone.ui.home.view.HomeActivity
 import com.tj.skyone.utils.TcpClient
 import com.tj.skyone.utils.eventbus.AnyEventTypes
 import com.tj.skyone.utils.eventbus.EventBusUtils
 import com.tj.skyone.widget.dialog.LoadingDialog
+import me.jessyan.autosize.internal.CustomAdapt
 import org.greenrobot.eventbus.Subscribe
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), CustomAdapt {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var dialog: LoadingDialog
 
+    private val tag = "LoginActivity"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (GlobalApp.isPad) {
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        }
+        Log.d(tag, "onCreate")
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         initEventData()
     }
 
@@ -77,6 +79,18 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
+        }
+    }
+
+    override fun isBaseOnWidth(): Boolean {
+        return true
+    }
+
+    override fun getSizeInDp(): Float {
+        return if (isPad) {
+            900.0.toFloat()
+        } else {
+            392.0.toFloat()
         }
     }
 }

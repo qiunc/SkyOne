@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatDialog;
 
 import com.tj.skyone.R;
-import com.yatoooon.screenadaptation.ScreenAdapterTools;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,7 +64,6 @@ public class PubDialog extends AppCompatDialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_login);
-        ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
         this.setCancelable(false);
         ButterKnife.bind(this);
 
