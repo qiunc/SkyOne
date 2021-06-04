@@ -93,7 +93,7 @@
         <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_on_off"
-            android:src="@mipmap/no_iocn"
+            android:src="@mipmap/off_icon"
             android:layout_width="147dp"
             android:layout_height="80dp" />
 

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@mipmap/t_login_bg"
-    tools:context=".ui.login.LoginActivity">
+    >
 
 
 
 
 
     <ImageView
-        android:layout_marginTop="186px"
+        android:layout_marginTop="93dp"
         android:layout_gravity="center"
         android:src="@mipmap/icons_new"
         android:layout_width="wrap_content"
@@ -24,9 +23,9 @@
 
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_marginLeft="230px"
-        android:layout_marginRight="230px"
-        android:layout_marginTop="115px"
+        android:layout_marginLeft="115dp"
+        android:layout_marginRight="115dp"
+        android:layout_marginTop="57dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -35,14 +34,14 @@
 
             android:visibility="gone"
             android:src="@mipmap/icons"
-            android:layout_width="160px"
-            android:layout_height="41px" />
+            android:layout_width="80dp"
+            android:layout_height="20dp" />
 
         <TextView
 
             android:textColor="@color/white"
-            android:textSize="32px"
-            android:text="SKY ONE实验室多功能智能集成吊装系统，采用模块化的设计，可以灵活的适应任何应用。可移动的媒介面板使得配件和连接可以放置在任何位置满足你的需求。多样化的可集成媒质，比如气、水、电、排气、照明、或废水 排放等，保证了高度的灵活性，是高端实验室的最佳选择。"
+            android:textSize="16sp"
+            android:text="@string/sky_one_intriduce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -52,25 +51,26 @@
 
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_marginTop="80px"
-        android:layout_width="684px"
+        android:layout_marginTop="40dp"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="124px"
+            android:layout_height="62dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="43px"
-                android:layout_height="49px"
-                android:layout_marginLeft="36px"
-                android:src="@mipmap/logina" />
+                android:layout_width="21dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="18dp"
+                android:src="@mipmap/logina"
+                android:layout_marginStart="18dp" />
 
             <FrameLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -82,11 +82,11 @@
                     android:gravity="center_vertical"
                     android:hint="请输入用户名"
                     android:inputType="text"
-                    android:paddingLeft="48px"
-                    android:paddingRight="48px"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
                     android:textColor="@color/white"
                     android:textColorHint="@color/color_989898"
-                    android:textSize="44px" />
+                    android:textSize="22sp" />
 
 
 
@@ -103,19 +103,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="124px"
+            android:layout_height="62dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="43px"
-                android:layout_height="49px"
-                android:layout_marginLeft="36px"
-                android:src="@mipmap/loginv" />
+                android:layout_width="21dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="18dp"
+                android:src="@mipmap/loginv"
+                android:layout_marginStart="18dp" />
 
 
             <FrameLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
@@ -128,11 +129,11 @@
                     android:hint="请输入密码"
                     android:inputType="textPassword"
                     android:maxLength="32"
-                    android:paddingLeft="48px"
-                    android:paddingRight="48px"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
                     android:textColor="@color/white"
                     android:textColorHint="@color/color_989898"
-                    android:textSize="44px" />
+                    android:textSize="22sp" />
 
 
 
@@ -149,14 +150,14 @@
 
 
     <TextView
-        android:layout_marginTop="60px"
+        android:layout_marginTop="30dp"
         android:id="@+id/btn_login"
         android:gravity="center"
         android:textColor="@color/color_ffffff"
         android:background="@mipmap/loginb"
         android:layout_gravity="center"
         android:text="登录"
-        android:layout_width="684px"
-        android:layout_height="80px" />
+        android:layout_width="342dp"
+        android:layout_height="40dp" />
 
 </LinearLayout>

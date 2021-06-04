@@ -1,76 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/color_3B3F41"
-    tools:context=".ui.home.view.HomeActivity">
+    android:orientation="vertical">
 
     <FrameLayout
-        android:background="@color/color_3B3F41"
-        android:layout_marginLeft="25px"
         android:layout_width="match_parent"
-        android:layout_height="95px"
+        android:layout_height="47dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/color_3B3F41"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/test"
-            android:layout_width="261px"
-            android:layout_height="59px"
-            android:layout_gravity="center|left"
+            android:layout_width="130dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center|start"
             android:src="@mipmap/my_icons" />
 
 
         <LinearLayout
             android:id="@+id/lin_tops"
-            android:layout_gravity="right"
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
 
 
             <LinearLayout
-                android:visibility="invisible"
                 android:id="@+id/lin_top"
-                android:layout_marginRight="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:visibility="invisible">
 
                 <ImageView
-                    android:layout_gravity="center"
-                    android:src="@mipmap/top_a"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/top_a" />
 
                 <TextView
 
                     android:id="@+id/home_a"
-                    android:textColor="@color/color_2CB6B2"
-                    android:text="0℃"
-                    android:textSize="35px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="0℃"
+                    android:textColor="@color/color_2CB6B2"
+                    android:textSize="17sp" />
 
                 <ImageView
-                    android:layout_marginLeft="20px"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/top_b"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/top_b" />
 
                 <TextView
                     android:id="@+id/home_b"
-                    android:textColor="@color/color_2CB6B2"
-                    android:text="0%"
-                    android:textSize="35px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/color_2CB6B2"
+                    android:textSize="17sp" />
 
 
             </LinearLayout>
@@ -78,381 +77,389 @@
 
             <ImageView
                 android:id="@+id/btn_right"
-                android:layout_marginRight="30px"
+                android:layout_width="20dp"
+                android:layout_height="19dp"
                 android:layout_gravity="center"
-                android:src="@mipmap/home_top"
-                android:layout_width="40px"
-                android:layout_height="38px" />
-
-
-
-
-
-
-
-
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/home_top" />
 
 
         </LinearLayout>
 
 
     </FrameLayout>
-<View
-    android:background="#2783B3"
-    android:layout_marginLeft="28px"
-    android:layout_marginRight="28px"
-    android:layout_width="match_parent"
-    android:layout_height="1px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="#2783B3" />
 
     <FrameLayout
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <com.tj.skyone.widget.MyViewPager
-            android:layout_marginBottom="220px"
             android:id="@+id/mViewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="110dp" />
 
 
         <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="171dp"
             android:layout_gravity="bottom"
             android:background="@mipmap/t_home_botton"
-            android:layout_width="match_parent"
-            android:layout_height="333px"
             android:orientation="vertical">
 
 
             <LinearLayout
 
-                android:layout_marginLeft="60px"
-                android:layout_marginTop="140px"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="70dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp">
 
 
+                    <LinearLayout
+                        android:id="@+id/btn1"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/home_btn_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/btn1"
-                    android:background="@mipmap/home_btn_bg"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="159px"
-                    android:layout_height="152px">
+                        <ImageView
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_h" />
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="主页"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
-                    <ImageView
-                        android:src="@mipmap/home_h"
-                        android:layout_width="106px"
-                        android:layout_height="107px"  />
+                    </LinearLayout>
 
-                    <TextView
-                        android:text="主页"
-                        android:textSize="33px"
-                        android:textColor="@color/white"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-
-                </LinearLayout>
+                </FrameLayout>
 
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp">
 
 
                     <LinearLayout
                         android:id="@+id/btn2"
-                        android:gravity="center"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
                         android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
 
                         <ImageView
-                            android:src="@mipmap/home_b_by"
-                            android:layout_width="106px"
-                            android:layout_height="107px"/>
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_b_by" />
 
                         <TextView
-                            android:text="摇臂"
-                            android:textSize="33px"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            android:text="摇臂"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
 
 
                     </LinearLayout>
 
                     <ImageView
                         android:id="@+id/img_yb"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
-                        android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ovals" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp">
 
 
                     <LinearLayout
                         android:id="@+id/btn3"
-                        android:gravity="center"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
                         android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
 
                         <ImageView
-                            android:src="@mipmap/home_b_p"
-                            android:layout_width="106px"
-                            android:layout_height="107px"/>
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_b_p" />
 
                         <TextView
-                            android:text="给排水"
-                            android:textSize="33px"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            android:text="给排水"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
 
 
                     </LinearLayout>
 
                     <ImageView
                         android:id="@+id/img_gps"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
-                        android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ovals" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp">
 
                     <LinearLayout
                         android:id="@+id/btn4"
-                        android:gravity="center"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
                         android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
 
                         <ImageView
-                            android:src="@mipmap/home_b_g"
-                            android:layout_width="106px"
-                            android:layout_height="107px"/>
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_b_g" />
 
                         <TextView
-                            android:text="高压"
-                            android:textSize="33px"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="高压"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
 
                     </LinearLayout>
+
                     <ImageView
                         android:id="@+id/img_gy"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
-                        android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ovals" />
                 </FrameLayout>
 
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp">
 
 
                     <LinearLayout
                         android:id="@+id/btn5"
-                        android:gravity="center"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
                         android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
 
                         <ImageView
-                            android:src="@mipmap/home_b_t"
-                            android:layout_width="106px"
-                            android:layout_height="107px"/>
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_b_t" />
 
                         <TextView
-                            android:text="通风"
-                            android:textSize="33px"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            android:text="通风"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
 
                     </LinearLayout>
 
                     <ImageView
                         android:id="@+id/img_tf"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
-                        android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ovals" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp">
 
 
                     <LinearLayout
                         android:id="@+id/btn6"
-                        android:gravity="center"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
                         android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
 
                         <ImageView
-                            android:src="@mipmap/home_b_z"
-                            android:layout_width="106px"
-                            android:layout_height="107px" />
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_b_z" />
 
                         <TextView
-                            android:text="照明"
-                            android:textSize="33px"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            android:text="照明"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
 
                     </LinearLayout>
 
                     <ImageView
                         android:id="@+id/img_zm"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
-                        android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ovals" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp">
 
 
                     <LinearLayout
                         android:id="@+id/btn7"
-                        android:gravity="center"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
                         android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
 
                         <ImageView
-                            android:src="@mipmap/home_b_d"
-                            android:layout_width="106px"
-                            android:layout_height="107px"/>
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_b_d" />
 
                         <TextView
-                            android:text="低压"
-                            android:textSize="33px"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            android:text="低压"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
 
                     </LinearLayout>
 
                     <ImageView
                         android:id="@+id/img_dy"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
-                        android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ovals" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp">
 
 
                     <LinearLayout
                         android:id="@+id/btn8"
-                        android:gravity="center"
+                        android:layout_width="79dp"
+                        android:layout_height="76dp"
                         android:layout_gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
 
                         <ImageView
-                            android:src="@mipmap/home_btn_inf"
-                            android:layout_width="106px"
-                            android:layout_height="107px" />
+                            android:layout_width="53dp"
+                            android:layout_height="53dp"
+                            android:src="@mipmap/home_btn_inf" />
 
                         <TextView
-                            android:text="信息"
-                            android:textSize="33px"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
+                            android:layout_height="wrap_content"
+                            android:text="信息"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
 
                     </LinearLayout>
 
                     <ImageView
-                        android:visibility="invisible"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:visibility="invisible" />
 
 
                 </FrameLayout>
@@ -461,21 +468,15 @@
             </LinearLayout>
 
 
-
-
             <ImageView
                 android:id="@+id/btn_off"
-                android:layout_marginRight="19dp"
-                android:layout_marginTop="40dp"
-                android:layout_gravity="end"
-                android:src="@mipmap/t_off"
                 android:layout_width="117dp"
                 android:layout_height="117dp"
-                android:layout_marginEnd="19dp" />
-
-
-
-
+                android:layout_gravity="end"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:src="@mipmap/t_off" />
 
 
         </FrameLayout>
