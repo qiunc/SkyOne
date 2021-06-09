@@ -7,11 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import com.blankj.utilcode.util.SPUtils
+import com.blankj.utilcode.util.ServiceUtils
 import com.blankj.utilcode.util.StringUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.google.gson.Gson
 import com.tj.skyone.R
 import com.tj.skyone.databinding.ActivityLoginBinding
+import com.tj.skyone.service.MyService
 import com.tj.skyone.ui.GlobalApp.Companion.isPad
 import com.tj.skyone.ui.home.view.HomeActivity
 import com.tj.skyone.utils.TcpClient
@@ -37,6 +39,13 @@ class LoginActivity : AppCompatActivity(), CustomAdapt {
     }
 
     private fun initEventData() {
+        //开启后台服务
+        try {
+            if (!ServiceUtils.isServiceRunning(MyService::class.java))
+                ServiceUtils.startService(MyService::class.java)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
         //注册EventBus
         EventBusUtils.register(this)
         //初始化加载框
@@ -60,6 +69,9 @@ class LoginActivity : AppCompatActivity(), CustomAdapt {
                     ToastUtils.showLong("请输入密码")
                 }
                 else -> {
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
                     val map = HashMap<Any, Any>()
                     map["methodName"] = "appLogin"
                     map["loginName"] = binding.etPhone.text.toString()
@@ -88,7 +100,7 @@ class LoginActivity : AppCompatActivity(), CustomAdapt {
 
     override fun getSizeInDp(): Float {
         return if (isPad) {
-            900.0.toFloat()
+            1280.0.toFloat()
         } else {
             392.0.toFloat()
         }

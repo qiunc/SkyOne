@@ -36,7 +36,7 @@ class WelcomeActivity : AppCompatActivity(){
 //            val applicationInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
 //            val metaData = applicationInfo.metaData
             //更改平板宽度基数
-
+            getDisplay()
             //屏幕适配初始化
 
             //锁横屏
@@ -49,32 +49,7 @@ class WelcomeActivity : AppCompatActivity(){
             //屏幕适配初始化
 //            ScreenAdapterTools.init(GlobalApp.instance)
 //            ScreenAdapterTools.getInstance().loadView(window.decorView)
-
-            val metric = DisplayMetrics()
-            windowManager.defaultDisplay.getMetrics(metric)
-
-            val width = metric.widthPixels // 宽度（PX）
-
-            val height = metric.heightPixels // 高度（PX）
-
-
-            val density = metric.density // 密度（0.75 / 1.0 / 1.5）
-
-            val densityDpi = metric.densityDpi // 密度DPI（120 / 160 / 240）
-
-
-            //屏幕宽度算法:屏幕宽度（像素）/屏幕密度
-
-            //屏幕宽度算法:屏幕宽度（像素）/屏幕密度
-            val screenWidth = (width / density).toInt() //屏幕宽度(dp)
-
-            val screenHeight = (height / density).toInt() //屏幕高度(dp)
-
-
-            Toast.makeText(
-                this, """宽度:$width 高度:$height 密度:$density 密度DPI:$densityDpi
-屏幕dp宽度：$screenWidth 屏幕dp高度：$screenHeight""", Toast.LENGTH_LONG
-            ).show()
+            getDisplay()
             //锁横屏
             //requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
@@ -82,31 +57,41 @@ class WelcomeActivity : AppCompatActivity(){
             val intent = Intent(this, ConfigActivity::class.java)
             startActivity(intent)
         }else{
-            try {
-                if (!ServiceUtils.isServiceRunning(MyService::class.java))
-                    ServiceUtils.startService(MyService::class.java)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-
-//            if (ObjectUtils.isEmpty(SPUtils.getInstance().getString("user",""))){
-
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
-
-//            }else{
-//
-//                val intent = Intent(this, HomeActivity::class.java)
-//                startActivity(intent)
-//
-//
-//            }
-
-
         }
 
         finish()
 
+    }
+
+    private fun getDisplay() {
+        val metric = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(metric)
+
+        val width = metric.widthPixels // 宽度（PX）
+
+        val height = metric.heightPixels // 高度（PX）
+
+
+        val density = metric.density // 密度（0.75 / 1.0 / 1.5）
+
+        val densityDpi = metric.densityDpi // 密度DPI（120 / 160 / 240）
+
+
+        //屏幕宽度算法:屏幕宽度（像素）/屏幕密度
+
+        //屏幕宽度算法:屏幕宽度（像素）/屏幕密度
+        val screenWidth = (width / density).toInt() //屏幕宽度(dp)
+
+        val screenHeight = (height / density).toInt() //屏幕高度(dp)
+
+        LogUtils.e("""宽度:$width 高度:$height 密度:$density 密度DPI:$densityDpi
+屏幕dp宽度：$screenWidth 屏幕dp高度：$screenHeight""")
+//        Toast.makeText(
+//            this, """宽度:$width 高度:$height 密度:$density 密度DPI:$densityDpi
+//屏幕dp宽度：$screenWidth 屏幕dp高度：$screenHeight""", Toast.LENGTH_LONG
+//        ).show()
     }
 
 }

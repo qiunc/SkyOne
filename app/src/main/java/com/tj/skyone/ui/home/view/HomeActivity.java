@@ -120,7 +120,7 @@ public class HomeActivity extends BaseActivity implements CustomAdapt {
     private CreateUserDialog createUserDialog;
 
 
-    private boolean onOff = false;
+    private boolean onOff = true;
 
 
     @Override
@@ -672,7 +672,7 @@ public class HomeActivity extends BaseActivity implements CustomAdapt {
     @Override
     public float getSizeInDp() {
         if(GlobalApp.Companion.isPad()) {
-            return 900.0f;
+            return 1280.0f;
         }else {
             return 320.0f;
         }

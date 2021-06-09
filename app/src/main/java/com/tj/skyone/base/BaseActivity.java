@@ -217,7 +217,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
     @Override
     public float getSizeInDp() {
         if (GlobalApp.Companion.isPad()) {
-            return (float) 900.0;
+            return (float) 1280.0;
         } else {
             return (float) 392.0;
         }
