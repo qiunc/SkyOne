@@ -3,6 +3,7 @@ package com.tj.skyone.base;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blankj.utilcode.util.BarUtils;
 import com.blankj.utilcode.util.ServiceUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.tj.skyone.service.MyService;
@@ -45,6 +47,12 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(GlobalApp.Companion.isPad()) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        } else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         //防止Home按键app重启
         if (!isTaskRoot()) {
             Intent intent = getIntent();
@@ -60,26 +68,18 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
             setContentView(getLayoutId());
             atys = this;
             butterKnife = ButterKnife.bind(this);
-//            ScreenAdapterTools.getInstance().loadView(getWindow().getDecorView());
 
-            getBundle(savedInstanceState);
-
-//            if (getStatusBarView() != null) {
-//                //状态栏引用
-//                BarUtils.setStatusBarColor(this, ContextCompat.getColor(GlobalApp.getInstance(), R.color.color_75D126));
-//                BarUtils.addMarginTopEqualStatusBarHeight(getStatusBarView());
-//            }
-
+            //隐藏状态栏
+            BarUtils.setStatusBarVisibility(this,false);
+            //初始化数据
             initEventAndData();
         } catch (Exception e) {
 
-//            ToastUtils.showLong("系统异常："+e.toString()+"："+e.getMessage());
+            ToastUtils.showLong("系统异常："+e.toString()+"："+e.getMessage());
             e.printStackTrace();
         }
     }
 
-    public void getBundle(Bundle bundle) {
-    }
 
 
     @Override
@@ -217,7 +217,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
     @Override
     public float getSizeInDp() {
         if (GlobalApp.Companion.isPad()) {
-            return (float) 1280.0;
+            return (float) 853;
         } else {
             return (float) 392.0;
         }
@@ -234,5 +234,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IBaseVie
 
     //Start第一次启动
     protected abstract void isStart();
+
+
 
 }

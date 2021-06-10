@@ -2,23 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="70px">
+    android:layout_height="31dp">
 
     <LinearLayout
         android:layout_weight="1"
         android:background="#727E7E"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
 
         <TextView
             android:id="@+id/id"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="29px"
+            android:textSize="12sp"
             android:textColor="#6BC6E4"
-            android:layout_width="120px"
+            android:layout_width="53dp"
             android:layout_height="wrap_content" />
 
         <View
@@ -30,11 +30,11 @@
             android:id="@+id/name"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="29px"
+            android:textSize="12sp"
             android:textColor="#6BC6E4"
             android:text="账号"
             android:singleLine="true"
-            android:layout_width="300px"
+            android:layout_width="133dp"
             android:layout_height="wrap_content" />
 
         <View
@@ -46,10 +46,10 @@
             android:id="@+id/type"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="29px"
+            android:textSize="12sp"
             android:textColor="#6BC6E4"
             android:singleLine="true"
-            android:layout_width="300px"
+            android:layout_width="133dp"
             android:layout_height="wrap_content" />
 
         <View
@@ -65,12 +65,12 @@
                 android:background="@mipmap/rm_icon"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textSize="29px"
+                android:textSize="12sp"
                 android:textColor="#4C5555"
                 android:text="删除"
                 android:singleLine="true"
-                android:layout_width="200px"
-                android:layout_height="60px" />
+                android:layout_width="88dp"
+                android:layout_height="26dp" />
 
         </FrameLayout>
 

@@ -11,23 +11,25 @@
     <FrameLayout
         android:background="#2CB6B2"
         android:layout_width="match_parent"
-        android:layout_height="100px">
+        android:layout_height="44dp">
 
         <LinearLayout
             android:id="@+id/left_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingLeft="30px"
-            android:paddingRight="80px">
+            android:paddingLeft="13dp"
+            android:paddingRight="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:paddingEnd="35dp">
 
             <!-- 左边图片 -->
             <ImageView
                 android:id="@+id/left_img"
-                android:layout_width="25px"
-                android:layout_height="47px"
+                android:layout_width="11dp"
+                android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/icon_left" />
         </LinearLayout>
@@ -36,7 +38,7 @@
             android:layout_gravity="center"
             android:textColor="#EDE8E0"
             android:text="设备记录列表"
-            android:textSize="44px"
+            android:textSize="19sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -44,21 +46,21 @@
     </FrameLayout>
 
     <LinearLayout
-        android:layout_marginRight="1px"
-        android:layout_marginLeft="1px"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="0dp"
         android:background="#313333"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="70px">
+        android:layout_height="31dp">
 
 
         <TextView
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="29px"
+            android:textSize="12sp"
             android:textColor="#6BC6E4"
             android:text="编号"
-            android:layout_width="120px"
+            android:layout_width="53dp"
             android:layout_height="wrap_content" />
 
         <View
@@ -70,11 +72,11 @@
             android:layout_weight="1"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="29px"
+            android:textSize="12sp"
             android:textColor="#6BC6E4"
             android:text="信息详细记录"
             android:singleLine="true"
-            android:layout_width="300px"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
         <View
@@ -85,11 +87,11 @@
         <TextView
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="29px"
+            android:textSize="12sp"
             android:textColor="#6BC6E4"
             android:text="操作员"
             android:singleLine="true"
-            android:layout_width="230px"
+            android:layout_width="102dp"
             android:layout_height="wrap_content" />
 
         <View
@@ -100,11 +102,11 @@
         <TextView
             android:gravity="center"
             android:layout_gravity="center"
-            android:textSize="29px"
+            android:textSize="12sp"
             android:textColor="#6BC6E4"
             android:text="记录时间"
             android:singleLine="true"
-            android:layout_width="250px"
+            android:layout_width="111dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -118,7 +120,7 @@
         android:layout_weight="1"
         android:id="@+id/r1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp" />
 
 
 

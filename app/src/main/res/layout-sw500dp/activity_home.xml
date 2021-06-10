@@ -10,16 +10,16 @@
 
     <FrameLayout
         android:background="@color/color_3B3F41"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="11dp"
         android:layout_width="match_parent"
-        android:layout_height="63dp"
+        android:layout_height="42dp"
         android:orientation="horizontal"
-        android:layout_marginStart="16dp">
+        android:layout_marginStart="11dp">
 
         <ImageView
             android:id="@+id/test"
-            android:layout_width="174dp"
-            android:layout_height="39dp"
+            android:layout_width="116dp"
+            android:layout_height="26dp"
             android:layout_gravity="center|start"
             android:src="@mipmap/my_icons" />
 
@@ -35,12 +35,12 @@
             <LinearLayout
                 android:visibility="invisible"
                 android:id="@+id/lin_top"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="13dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="20dp">
+                android:layout_marginEnd="13dp">
 
                 <ImageView
                     android:layout_gravity="center"
@@ -53,23 +53,23 @@
                     android:id="@+id/home_a"
                     android:textColor="@color/color_2CB6B2"
                     android:text="0℃"
-                    android:textSize="23sp"
+                    android:textSize="15sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <ImageView
-                    android:layout_marginLeft="13dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_gravity="center"
                     android:src="@mipmap/top_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="13dp" />
+                    android:layout_marginStart="8dp" />
 
                 <TextView
                     android:id="@+id/home_b"
                     android:textColor="@color/color_2CB6B2"
                     android:text="0%"
-                    android:textSize="23sp"
+                    android:textSize="15sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -81,12 +81,12 @@
 
             <ImageView
                 android:id="@+id/btn_right"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="13dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/home_top"
-                android:layout_width="26dp"
-                android:layout_height="25dp"
-                android:layout_marginEnd="20dp" />
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="13dp" />
 
 
 
@@ -103,8 +103,8 @@
     </FrameLayout>
     <View
         android:background="#2783B3"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="18dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:layout_width="match_parent"
         android:layout_height="0dp" />
 
@@ -114,7 +114,7 @@
         android:layout_height="0dp">
 
         <com.tj.skyone.widget.MyViewPager
-            android:layout_marginBottom="146dp"
+            android:layout_marginBottom="97dp"
             android:id="@+id/mViewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -124,18 +124,17 @@
             android:layout_gravity="bottom"
             android:background="@mipmap/t_home_botton"
             android:layout_width="match_parent"
-            android:layout_height="222dp"
+            android:layout_height="148dp"
             android:orientation="vertical">
 
 
             <LinearLayout
 
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="93dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="62dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp">
+                android:layout_height="wrap_content">
 
 
 
@@ -145,18 +144,18 @@
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:orientation="vertical"
-                    android:layout_width="106dp"
-                    android:layout_height="101dp">
+                    android:layout_width="70dp"
+                    android:layout_height="67dp">
 
 
                     <ImageView
                         android:src="@mipmap/home_h"
-                        android:layout_width="70dp"
-                        android:layout_height="71dp"  />
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"  />
 
                     <TextView
                         android:text="主页"
-                        android:textSize="22sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -166,10 +165,10 @@
 
 
                 <FrameLayout
-                    android:layout_marginLeft="26dp"
+                    android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp">
+                    android:layout_marginStart="17dp">
 
 
                     <LinearLayout
@@ -177,18 +176,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="106dp"
-                        android:layout_height="101dp">
+                        android:layout_width="70dp"
+                        android:layout_height="67dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_by"
-                            android:layout_width="70dp"
-                            android:layout_height="71dp"/>
+                            android:layout_width="47dp"
+                            android:layout_height="47dp"/>
 
                         <TextView
                             android:text="摇臂"
-                            android:textSize="22sp"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -199,21 +198,22 @@
 
                     <ImageView
                         android:id="@+id/img_yb"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="2dp"
                         android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginEnd="3dp" />
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="2dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="26dp"
+                    android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp">
 
 
                     <LinearLayout
@@ -221,18 +221,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="106dp"
-                        android:layout_height="101dp">
+                        android:layout_width="70dp"
+                        android:layout_height="67dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_p"
-                            android:layout_width="70dp"
-                            android:layout_height="71dp"/>
+                            android:layout_width="47dp"
+                            android:layout_height="47dp"/>
 
                         <TextView
                             android:text="给排水"
-                            android:textSize="22sp"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -243,40 +243,40 @@
 
                     <ImageView
                         android:id="@+id/img_gps"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="2dp"
                         android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginEnd="3dp" />
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="2dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="26dp"
+                    android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp">
+                    android:layout_marginStart="17dp">
 
                     <LinearLayout
                         android:id="@+id/btn4"
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="106dp"
-                        android:layout_height="101dp">
+                        android:layout_width="70dp"
+                        android:layout_height="67dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_g"
-                            android:layout_width="70dp"
-                            android:layout_height="71dp"/>
+                            android:layout_width="47dp"
+                            android:layout_height="47dp"/>
 
                         <TextView
                             android:text="高压"
-                            android:textSize="22sp"
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -285,21 +285,20 @@
                     </LinearLayout>
                     <ImageView
                         android:id="@+id/img_gy"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="2dp"
                         android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginEnd="3dp" />
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="2dp" />
                 </FrameLayout>
 
 
                 <FrameLayout
-                    android:layout_marginLeft="26dp"
+                    android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp">
+                    android:layout_height="wrap_content">
 
 
                     <LinearLayout
@@ -307,18 +306,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="106dp"
-                        android:layout_height="101dp">
+                        android:layout_width="70dp"
+                        android:layout_height="67dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_t"
-                            android:layout_width="70dp"
-                            android:layout_height="71dp"/>
+                            android:layout_width="47dp"
+                            android:layout_height="47dp"/>
 
                         <TextView
                             android:text="通风"
-                            android:textSize="22sp"
+                            android:textSize="14dp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -329,22 +328,22 @@
 
                     <ImageView
                         android:id="@+id/img_tf"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="2dp"
                         android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginEnd="3dp" />
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="2dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="26dp"
+                    android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp">
+                    android:layout_marginStart="17dp">
 
 
                     <LinearLayout
@@ -352,18 +351,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="106dp"
-                        android:layout_height="101dp">
+                        android:layout_width="70dp"
+                        android:layout_height="67dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_z"
-                            android:layout_width="70dp"
-                            android:layout_height="71dp" />
+                            android:layout_width="47dp"
+                            android:layout_height="47dp" />
 
                         <TextView
                             android:text="照明"
-                            android:textSize="22sp"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -374,21 +373,22 @@
 
                     <ImageView
                         android:id="@+id/img_zm"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="2dp"
                         android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp" />
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="2dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="40px"
+                    android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40px">
+                    android:layout_marginStart="17dp">
 
 
                     <LinearLayout
@@ -396,18 +396,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="106dp"
-                        android:layout_height="101dp">
+                        android:layout_width="70dp"
+                        android:layout_height="67dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_d"
-                            android:layout_width="70dp"
-                            android:layout_height="71dp"/>
+                            android:layout_width="47dp"
+                            android:layout_height="47dp"/>
 
                         <TextView
                             android:text="低压"
-                            android:textSize="22sp"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -418,22 +418,22 @@
 
                     <ImageView
                         android:id="@+id/img_dy"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="2dp"
                         android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginEnd="3dp" />
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="2dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="26dp"
+                    android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp">
+                    android:layout_marginStart="17dp">
 
 
                     <LinearLayout
@@ -441,18 +441,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="106dp"
-                        android:layout_height="101dp">
+                        android:layout_width="70dp"
+                        android:layout_height="67dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_btn_inf"
-                            android:layout_width="70dp"
-                            android:layout_height="71dp" />
+                            android:layout_width="47dp"
+                            android:layout_height="47dp" />
 
                         <TextView
                             android:text="信息"
-                            android:textSize="22dp"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -463,13 +463,13 @@
 
                     <ImageView
                         android:visibility="invisible"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="2dp"
                         android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginEnd="3dp" />
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginEnd="2dp" />
 
 
                 </FrameLayout>
@@ -482,13 +482,13 @@
 
             <ImageView
                 android:id="@+id/btn_off"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="53dp"
-                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="end"
                 android:src="@mipmap/t_off"
-                android:layout_width="156dp"
-                android:layout_height="156dp"
-                android:layout_marginEnd="25dp" />
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="16dp" />
 
 
 

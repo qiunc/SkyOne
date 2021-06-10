@@ -55,7 +55,7 @@ public abstract class BaseFragment extends Fragment implements IBaseFragmentView
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             boolean isSupportHidden = savedInstanceState.getBoolean(STATE_SAVE_IS_HIDDEN);
-            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            FragmentTransaction ft = Objects.requireNonNull(getFragmentManager()).beginTransaction();
             if (isSupportHidden) {
                 ft.hide(this);
             } else {
@@ -219,7 +219,7 @@ public abstract class BaseFragment extends Fragment implements IBaseFragmentView
     @Override
     public float getSizeInDp() {
         if (GlobalApp.Companion.isPad()) {
-            return (float) 1280.0;
+            return (float) 853;
         } else {
             return (float) 392.0;
         }

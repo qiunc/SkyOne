@@ -2,6 +2,7 @@ package com.tj.skyone.ui.home.view;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -125,11 +126,11 @@ public class HomeActivity extends BaseActivity implements CustomAdapt {
 
     @Override
     protected int getLayoutId() {
-//        if(GlobalApp.Companion.isPad()) {
-//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-//        } else {
-//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//        }
+        if(GlobalApp.Companion.isPad()) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        } else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
         return R.layout.activity_home;
     }
 
@@ -672,7 +673,7 @@ public class HomeActivity extends BaseActivity implements CustomAdapt {
     @Override
     public float getSizeInDp() {
         if(GlobalApp.Companion.isPad()) {
-            return 1280.0f;
+            return 853.0f;
         }else {
             return 320.0f;
         }

@@ -1,17 +1,15 @@
 package com.tj.skyone.ui.welcome.view
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ObjectUtils
 import com.blankj.utilcode.util.SPUtils
-import com.blankj.utilcode.util.ServiceUtils
 import com.tj.skyone.R
-import com.tj.skyone.service.MyService
 import com.tj.skyone.ui.GlobalApp
 import com.tj.skyone.ui.home.view.ConfigActivity
 import com.tj.skyone.ui.login.LoginActivity
@@ -35,12 +33,9 @@ class WelcomeActivity : AppCompatActivity(){
             GlobalApp.isPad = true
 //            val applicationInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
 //            val metaData = applicationInfo.metaData
-            //更改平板宽度基数
             getDisplay()
-            //屏幕适配初始化
-
             //锁横屏
-            //requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         } else {
             GlobalApp.isPad = false
 
@@ -50,8 +45,8 @@ class WelcomeActivity : AppCompatActivity(){
 //            ScreenAdapterTools.init(GlobalApp.instance)
 //            ScreenAdapterTools.getInstance().loadView(window.decorView)
             getDisplay()
-            //锁横屏
-            //requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+//            //锁横屏
+//            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         }
         if (ObjectUtils.isEmpty(SPUtils.getInstance().getString("ip"))||ObjectUtils.isEmpty(SPUtils.getInstance().getString("port"))) {
             val intent = Intent(this, ConfigActivity::class.java)

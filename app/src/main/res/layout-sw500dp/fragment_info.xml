@@ -9,15 +9,16 @@
 
 
        <LinearLayout
-           android:layout_marginTop="20px"
-           android:paddingTop="23px"
-           android:layout_marginLeft="30px"
-           android:layout_marginRight="30px"
-           android:paddingLeft="30px"
+           android:layout_marginTop="8dp"
+           android:paddingTop="10dp"
+           android:layout_marginLeft="13dp"
+           android:layout_marginRight="13dp"
+           android:paddingLeft="13dp"
            android:background="#272828"
            android:orientation="vertical"
            android:layout_width="match_parent"
-           android:layout_height="80px">
+           android:layout_height="35dp"
+           android:paddingStart="13dp">
 
 
 
@@ -29,104 +30,115 @@
 
                <TextView
                    android:id="@+id/tv_number"
-                   android:textSize="29px"
+                   android:textSize="12sp"
                    android:text="在线设备  12台"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content" />
 
                <TextView
-                   android:layout_marginLeft="44px"
-                   android:textSize="29px"
+                   android:layout_marginLeft="19dp"
+                   android:textSize="12sp"
                    android:text="状态"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="19dp" />
 
                <ImageView
-                   android:layout_marginLeft="22px"
+                   android:layout_marginLeft="9dp"
                    android:layout_gravity="center"
                    android:src="@mipmap/g_y"
-                   android:layout_width="32px"
-                   android:layout_height="32px" />
+                   android:layout_width="14dp"
+                   android:layout_height="14dp"
+                   android:layout_marginStart="9dp" />
 
                <TextView
-                   android:layout_marginLeft="8px"
-                   android:textSize="29px"
+                   android:layout_marginLeft="3dp"
+                   android:textSize="12sp"
                    android:text="正常运行"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="3dp" />
 
                <ImageView
-                   android:layout_marginLeft="100px"
+                   android:layout_marginLeft="22dp"
                    android:layout_gravity="center"
                    android:src="@mipmap/r_y"
-                   android:layout_width="32px"
-                   android:layout_height="32px" />
+                   android:layout_width="14dp"
+                   android:layout_height="14dp"
+                   android:layout_marginStart="22dp" />
 
                <TextView
-                   android:layout_marginLeft="8px"
-                   android:textSize="29px"
+                   android:layout_marginLeft="3dp"
+                   android:textSize="12sp"
                    android:text="风管异常"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="3dp" />
 
                <ImageView
-                   android:layout_marginLeft="50px"
+                   android:layout_marginLeft="22dp"
                    android:layout_gravity="center"
                    android:src="@mipmap/b_y"
-                   android:layout_width="32px"
-                   android:layout_height="32px" />
+                   android:layout_width="14dp"
+                   android:layout_height="14dp"
+                   android:layout_marginStart="22dp" />
 
                <TextView
-                   android:layout_marginLeft="8px"
-                   android:textSize="29px"
+                   android:layout_marginLeft="3dp"
+                   android:textSize="12sp"
                    android:text="摇臂异常"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="3dp" />
 
                <ImageView
-                   android:layout_marginLeft="50px"
+                   android:layout_marginLeft="22dp"
                    android:layout_gravity="center"
                    android:src="@mipmap/gn"
-                   android:layout_width="32px"
-                   android:layout_height="32px" />
+                   android:layout_width="14dp"
+                   android:layout_height="14dp" />
 
                <TextView
-                   android:layout_marginLeft="8px"
-                   android:textSize="29px"
+                   android:layout_marginLeft="3dp"
+                   android:textSize="12sp"
                    android:text="低压过载"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="3dp" />
 
                <ImageView
-                   android:layout_marginLeft="50px"
+                   android:layout_marginLeft="22dp"
                    android:layout_gravity="center"
                    android:src="@mipmap/gy_y"
-                   android:layout_width="32px"
-                   android:layout_height="32px" />
+                   android:layout_width="14dp"
+                   android:layout_height="14dp"
+                   android:layout_marginStart="22dp" />
 
                <TextView
-                   android:layout_marginLeft="8px"
-                   android:textSize="29px"
+                   android:layout_marginLeft="3dp"
+                   android:textSize="12sp"
                    android:text="排水异常"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="3dp" />
 
 
                <TextView
-                   android:layout_marginLeft="140px"
+                   android:layout_marginLeft="62dp"
                    android:layout_gravity="center"
-                   android:textSize="32px"
+                   android:textSize="14sp"
                    android:text="信息记录表"
                    android:textColor="@color/color_ffffff"
                    android:layout_width="wrap_content"
-                   android:layout_height="wrap_content" />
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="62dp" />
 
 
            </LinearLayout>
@@ -141,38 +153,42 @@
            android:layout_height="match_parent" >
 
            <LinearLayout
-               android:layout_marginLeft="30px"
+               android:layout_marginLeft="13dp"
                android:layout_weight="1"
                android:orientation="horizontal"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent">
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_marginStart="13dp">
 
            <com.tj.skyone.widget.MyRecyclerView
-               android:layout_marginTop="10px"
+               android:layout_marginTop="4dp"
                android:overScrollMode="never"
                android:id="@+id/r1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content" />
 
            <com.tj.skyone.widget.MyRecyclerView
-               android:layout_marginTop="10px"
-               android:layout_marginLeft="50px"
+               android:layout_marginTop="4dp"
+               android:layout_marginLeft="22dp"
                android:overScrollMode="never"
                android:id="@+id/r2"
                android:layout_width="wrap_content"
-               android:layout_height="wrap_content" />
+               android:layout_height="wrap_content"
+               android:layout_marginStart="22dp" />
 
            </LinearLayout>
 
            <LinearLayout
-               android:layout_marginRight="30px"
-               android:paddingLeft="30px"
+               android:layout_marginRight="13dp"
+               android:paddingLeft="13dp"
                android:background="#272828"
                android:orientation="vertical"
                android:layout_width="wrap_content"
-               android:layout_height="wrap_content">
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="13dp"
+               android:paddingStart="13dp">
            <LinearLayout
-               android:layout_marginTop="15px"
+               android:layout_marginTop="6dp"
                android:orientation="horizontal"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content">
@@ -184,15 +200,15 @@
                    android:layout_height="wrap_content">
 
                    <TextView
-                       android:textSize="29px"
+                       android:textSize="12dp"
                        android:text="风管复位"
                        android:textColor="#2783B3"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content" />
 
                    <LinearLayout
-                       android:layout_marginTop="5px"
-                       android:layout_marginBottom="5px"
+                       android:layout_marginTop="2dp"
+                       android:layout_marginBottom="2dp"
                        android:orientation="horizontal"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content">
@@ -200,18 +216,19 @@
                        <ImageView
                            android:layout_gravity="center"
                            android:src="@mipmap/r"
-                           android:layout_width="35px"
-                           android:layout_height="35px" />
+                           android:layout_width="15dp"
+                           android:layout_height="15dp" />
 
                        <TextView
                            android:id="@+id/tv_fgs"
-                           android:layout_marginLeft="47px"
+                           android:layout_marginLeft="20dp"
                            android:layout_gravity="center"
-                           android:textSize="25px"
+                           android:textSize="11sp"
                            android:text="04台"
                            android:textColor="@color/color_ffffff"
                            android:layout_width="wrap_content"
-                           android:layout_height="wrap_content" />
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="20dp" />
 
                    </LinearLayout>
 
@@ -222,7 +239,7 @@
 
                        <TextView
                            android:layout_gravity="center"
-                           android:textSize="25px"
+                           android:textSize="11dp"
                            android:text="失败次数："
                            android:textColor="@color/color_ffffff"
                            android:layout_width="wrap_content"
@@ -230,13 +247,14 @@
 
                        <TextView
                            android:id="@+id/tv_fg"
-                           android:layout_marginLeft="20px"
+                           android:layout_marginLeft="8dp"
                            android:layout_gravity="center"
-                           android:textSize="25px"
+                           android:textSize="11sp"
                            android:text="04台"
                            android:textColor="@color/color_ffffff"
-                           android:layout_width="65px"
-                           android:layout_height="wrap_content" />
+                           android:layout_width="28dp"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="8dp" />
 
                    </LinearLayout>
 
@@ -246,17 +264,19 @@
                </LinearLayout>
 
                <TextView
-                   android:layout_marginRight="10px"
+                   android:layout_marginRight="4dp"
                    android:id="@+id/info_a"
-                   android:layout_width="180px"
-                   android:layout_height="78px"
+                   android:layout_width="80dp"
+                   android:layout_height="34dp"
                    android:layout_gravity="center"
-                   android:layout_marginLeft="15px"
+                   android:layout_marginLeft="6dp"
                    android:background="@drawable/btn_bg"
                    android:gravity="center"
                    android:text="初始化"
                    android:textColor="@color/color_ffffff"
-                   android:textSize="26px" />
+                   android:textSize="11sp"
+                   android:layout_marginEnd="4dp"
+                   android:layout_marginStart="6dp" />
 
 
 
@@ -264,7 +284,7 @@
            </LinearLayout>
 
            <LinearLayout
-               android:layout_marginTop="30px"
+               android:layout_marginTop="13dp"
                android:orientation="horizontal"
                android:layout_width="match_parent"
                android:layout_height="match_parent">
@@ -276,15 +296,15 @@
                    android:layout_height="wrap_content">
 
                    <TextView
-                       android:textSize="29px"
+                       android:textSize="12sp"
                        android:text="低压过载"
                        android:textColor="#2783B3"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content" />
 
                    <LinearLayout
-                       android:layout_marginTop="5px"
-                       android:layout_marginBottom="5px"
+                       android:layout_marginTop="2dp"
+                       android:layout_marginBottom="2dp"
                        android:orientation="horizontal"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content">
@@ -292,18 +312,19 @@
                        <ImageView
                            android:layout_gravity="center"
                            android:src="@mipmap/gn"
-                           android:layout_width="35px"
-                           android:layout_height="35px" />
+                           android:layout_width="15dp"
+                           android:layout_height="15dp" />
 
                        <TextView
                            android:id="@+id/tv_dys"
-                           android:layout_marginLeft="47px"
+                           android:layout_marginLeft="20dp"
                            android:layout_gravity="center"
-                           android:textSize="25px"
+                           android:textSize="11sp"
                            android:text="04台"
                            android:textColor="@color/color_ffffff"
                            android:layout_width="wrap_content"
-                           android:layout_height="wrap_content" />
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="20dp" />
 
                    </LinearLayout>
 
@@ -314,7 +335,7 @@
 
                        <TextView
                            android:layout_gravity="center"
-                           android:textSize="25px"
+                           android:textSize="11sp"
                            android:text="失败次数："
                            android:textColor="@color/color_ffffff"
                            android:layout_width="wrap_content"
@@ -322,13 +343,14 @@
 
                        <TextView
                            android:id="@+id/tv_dy"
-                           android:layout_marginLeft="20px"
+                           android:layout_marginLeft="8dp"
                            android:layout_gravity="center"
-                           android:textSize="25px"
+                           android:textSize="11sp"
                            android:text="04台"
                            android:textColor="@color/color_ffffff"
-                           android:layout_width="65px"
-                           android:layout_height="wrap_content" />
+                           android:layout_width="28dp"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="8dp" />
 
                    </LinearLayout>
 
@@ -338,17 +360,19 @@
                </LinearLayout>
 
                <TextView
-                   android:layout_marginRight="10px"
+                   android:layout_marginRight="4dp"
                    android:id="@+id/info_b"
-                   android:layout_marginLeft="15px"
+                   android:layout_marginLeft="6dp"
                    android:layout_gravity="center"
                    android:gravity="center"
                    android:textColor="@color/color_ffffff"
                    android:background="@drawable/btn_bg"
-                   android:textSize="26px"
+                   android:textSize="11sp"
                    android:text="初始化"
-                   android:layout_width="180px"
-                   android:layout_height="78px" />
+                   android:layout_width="80dp"
+                   android:layout_height="34dp"
+                   android:layout_marginEnd="4dp"
+                   android:layout_marginStart="6dp" />
 
                <!--                       <LinearLayout-->
                <!--                           android:orientation="vertical"-->
@@ -363,7 +387,7 @@
            </LinearLayout>
 
                <LinearLayout
-                   android:layout_marginTop="30px"
+                   android:layout_marginTop="13dp"
                    android:orientation="horizontal"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent">
@@ -375,15 +399,15 @@
                        android:layout_height="wrap_content">
 
                        <TextView
-                           android:textSize="29px"
+                           android:textSize="12sp"
                            android:text="摇臂复位"
                            android:textColor="#2783B3"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content" />
 
                        <LinearLayout
-                           android:layout_marginTop="5px"
-                           android:layout_marginBottom="5px"
+                           android:layout_marginTop="2dp"
+                           android:layout_marginBottom="2dp"
                            android:orientation="horizontal"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content">
@@ -391,18 +415,19 @@
                            <ImageView
                                android:layout_gravity="center"
                                android:src="@mipmap/b"
-                               android:layout_width="35px"
-                               android:layout_height="35px" />
+                               android:layout_width="15dp"
+                               android:layout_height="15dp" />
 
                            <TextView
                                android:id="@+id/tv_ybs"
-                               android:layout_marginLeft="47px"
+                               android:layout_marginLeft="20dp"
                                android:layout_gravity="center"
-                               android:textSize="25px"
+                               android:textSize="11sp"
                                android:text="04台"
                                android:textColor="@color/color_ffffff"
                                android:layout_width="wrap_content"
-                               android:layout_height="wrap_content" />
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="20dp" />
 
                        </LinearLayout>
 
@@ -413,7 +438,7 @@
 
                            <TextView
                                android:layout_gravity="center"
-                               android:textSize="25px"
+                               android:textSize="11sp"
                                android:text="失败次数："
                                android:textColor="@color/color_ffffff"
                                android:layout_width="wrap_content"
@@ -421,13 +446,14 @@
 
                            <TextView
                                android:id="@+id/tv_yb"
-                               android:layout_marginLeft="20px"
+                               android:layout_marginLeft="8dp"
                                android:layout_gravity="center"
-                               android:textSize="25px"
+                               android:textSize="11sp"
                                android:text="04台"
                                android:textColor="@color/color_ffffff"
-                               android:layout_width="65px"
-                               android:layout_height="wrap_content" />
+                               android:layout_width="28dp"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="8dp" />
 
                        </LinearLayout>
 
@@ -437,17 +463,19 @@
                    </LinearLayout>
 
                    <TextView
-                       android:layout_marginRight="10px"
+                       android:layout_marginRight="4dp"
                        android:id="@+id/info_c"
-                       android:layout_marginLeft="15px"
+                       android:layout_marginLeft="6dp"
                        android:layout_gravity="center"
                        android:gravity="center"
                        android:textColor="@color/color_ffffff"
                        android:background="@drawable/btn_bg"
-                       android:textSize="26px"
+                       android:textSize="11sp"
                        android:text="初始化"
-                       android:layout_width="180px"
-                       android:layout_height="78px" />
+                       android:layout_width="80dp"
+                       android:layout_height="34dp"
+                       android:layout_marginEnd="4dp"
+                       android:layout_marginStart="6dp" />
 
                    <!--                       <LinearLayout-->
                    <!--                           android:orientation="vertical"-->
@@ -462,7 +490,7 @@
                </LinearLayout>
 
                <LinearLayout
-                   android:layout_marginTop="30px"
+                   android:layout_marginTop="13dp"
                    android:orientation="horizontal"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent">
@@ -474,15 +502,15 @@
                        android:layout_height="wrap_content">
 
                        <TextView
-                           android:textSize="29px"
+                           android:textSize="12sp"
                            android:text="排水异常"
                            android:textColor="#2783B3"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content" />
 
                        <LinearLayout
-                           android:layout_marginTop="5px"
-                           android:layout_marginBottom="5px"
+                           android:layout_marginTop="2dp"
+                           android:layout_marginBottom="2dp"
                            android:orientation="horizontal"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content">
@@ -490,18 +518,19 @@
                            <ImageView
                                android:layout_gravity="center"
                                android:src="@mipmap/gy"
-                               android:layout_width="35px"
-                               android:layout_height="35px" />
+                               android:layout_width="15dp"
+                               android:layout_height="15dp" />
 
                            <TextView
                                android:id="@+id/tv_pss"
-                               android:layout_marginLeft="47px"
+                               android:layout_marginLeft="20dp"
                                android:layout_gravity="center"
-                               android:textSize="25px"
+                               android:textSize="11sp"
                                android:text="04台"
                                android:textColor="@color/color_ffffff"
                                android:layout_width="wrap_content"
-                               android:layout_height="wrap_content" />
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="20dp" />
 
                        </LinearLayout>
 
@@ -512,7 +541,7 @@
 
                            <TextView
                                android:layout_gravity="center"
-                               android:textSize="25px"
+                               android:textSize="11sp"
                                android:text="失败次数："
                                android:textColor="@color/color_ffffff"
                                android:layout_width="wrap_content"
@@ -520,13 +549,14 @@
 
                            <TextView
                                android:id="@+id/tv_ps"
-                               android:layout_marginLeft="20px"
+                               android:layout_marginLeft="8dp"
                                android:layout_gravity="center"
-                               android:textSize="25px"
+                               android:textSize="11sp"
                                android:text="04台"
                                android:textColor="@color/color_ffffff"
-                               android:layout_width="65px"
-                               android:layout_height="wrap_content" />
+                               android:layout_width="28dp"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="8dp" />
 
                        </LinearLayout>
 
@@ -536,33 +566,35 @@
                    </LinearLayout>
 
                    <TextView
-                       android:layout_marginRight="10px"
+                       android:layout_marginRight="4dp"
                        android:id="@+id/info_d"
-                       android:layout_marginLeft="15px"
+                       android:layout_marginLeft="6dp"
                        android:layout_gravity="center"
                        android:gravity="center"
                        android:textColor="@color/color_ffffff"
                        android:background="@drawable/btn_bg"
-                       android:textSize="26px"
+                       android:textSize="11sp"
                        android:text="初始化"
-                       android:layout_width="180px"
-                       android:layout_height="78px" />
+                       android:layout_width="80dp"
+                       android:layout_height="34dp"
+                       android:layout_marginEnd="4dp"
+                       android:layout_marginStart="6dp" />
 
 
 
                </LinearLayout>
 
                <TextView
-                   android:layout_marginBottom="20px"
+                   android:layout_marginBottom="8dp"
                    android:id="@+id/info_all"
-                   android:layout_marginTop="40px"
+                   android:layout_marginTop="17dp"
                    android:gravity="center"
                    android:textColor="@color/color_ffffff"
                    android:background="@drawable/btn_bg"
-                   android:textSize="26px"
+                   android:textSize="11sp"
                    android:text="全部初始化"
-                   android:layout_width="222px"
-                   android:layout_height="78px"  />
+                   android:layout_width="98dp"
+                   android:layout_height="34dp"  />
 
            </LinearLayout>
 

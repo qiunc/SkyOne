@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/time"
-        android:layout_marginTop="70px"
-        android:textSize="190px"
+        android:layout_marginTop="31dp"
+        android:textSize="84sp"
         android:layout_gravity="center"
         android:text="09:00"
         android:textColor="@color/color_ffffff"
@@ -27,25 +27,26 @@
         <TextView
             android:id="@+id/date"
             android:textColor="@color/color_2CB6B2"
-            android:textSize="33px"
+            android:textSize="14sp"
             android:text="2020/01/01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/dates"
-            android:layout_marginLeft="175px"
+            android:layout_marginLeft="77dp"
             android:textColor="@color/color_2CB6B2"
-            android:textSize="33px"
+            android:textSize="14dp"
             android:text="星期三"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp" />
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="87px"
+        android:layout_marginTop="38dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -60,13 +61,13 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:src="@mipmap/home_b"
-                android:layout_width="88px"
-                android:layout_height="168px" />
+                android:layout_width="39dp"
+                android:layout_height="74dp" />
 
             <TextView
                 android:id="@+id/tv_a"
                 android:textColor="@color/color_2CB6B2"
-                android:textSize="80px"
+                android:textSize="35sp"
                 android:text="0℃"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -78,21 +79,22 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginLeft="300px"
+            android:layout_marginLeft="133dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="133dp">
             <ImageView
                 android:src="@mipmap/home_a"
-                android:layout_width="120px"
-                android:layout_height="168px"/>
+                android:layout_width="53dp"
+                android:layout_height="74dp"/>
 
             <TextView
                 android:id="@+id/tv_b"
                 android:textColor="@color/color_2CB6B2"
-                android:textSize="80px"
+                android:textSize="35sp"
                 android:text="0%"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

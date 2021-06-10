@@ -51,7 +51,7 @@ class GlobalApp : Application() {
         Thread.setDefaultUncaughtExceptionHandler(catchExcep)
 
         //当 App 中出现多进程, 并且您需要适配所有的进程,适配方案
-        AutoSize.initCompatMultiProcess(this)
+        //AutoSize.initCompatMultiProcess(this)
         AutoSize.checkAndInit(this)
         AutoSizeConfig.getInstance()
             .setCustomFragment(true)
@@ -89,7 +89,7 @@ class GlobalApp : Application() {
         AutoSizeConfig.getInstance()
             .unitsManager
             .setSupportDP(true)
-            .setDesignSize(2560f, 1800f)
+//            .setDesignSize(2560f, 1600f)
             .setSupportSP(true)
             .supportSubunits = Subunits.MM
     }

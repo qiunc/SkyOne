@@ -1,8 +1,8 @@
 package com.tj.skyone.ui.login
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
@@ -31,10 +31,15 @@ class LoginActivity : AppCompatActivity(), CustomAdapt {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(tag, "onCreate")
+        requestedOrientation = if(isPad) {
+            //锁横屏
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        } else {
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         initEventData()
     }
 
@@ -69,9 +74,6 @@ class LoginActivity : AppCompatActivity(), CustomAdapt {
                     ToastUtils.showLong("请输入密码")
                 }
                 else -> {
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
-                    finish()
                     val map = HashMap<Any, Any>()
                     map["methodName"] = "appLogin"
                     map["loginName"] = binding.etPhone.text.toString()
@@ -100,7 +102,7 @@ class LoginActivity : AppCompatActivity(), CustomAdapt {
 
     override fun getSizeInDp(): Float {
         return if (isPad) {
-            1280.0.toFloat()
+            853.0.toFloat()
         } else {
             392.0.toFloat()
         }

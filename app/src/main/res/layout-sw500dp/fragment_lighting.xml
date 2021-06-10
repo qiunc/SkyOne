@@ -2,47 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:background="@color/color_383838"
-    android:paddingRight="15dp"
-    android:paddingLeft="52dp"
+    android:paddingRight="13dp"
+    android:paddingLeft="46dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingEnd="15dp"
-    android:paddingStart="52dp">
+    android:paddingEnd="13dp"
+    android:paddingStart="46dp">
 
     <ImageView
-        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
         android:src="@mipmap/t_ra_show"
-        android:layout_width="420dp"
-        android:layout_height="400dp" />
+        android:layout_width="300dp"
+        android:layout_height="274dp" />
 
 
 
     <LinearLayout
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="17dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp">
+        android:layout_marginStart="48dp">
 
 
 
         <TextView
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="4dp"
             android:gravity="center"
-            android:textSize="22sp"
+            android:textSize="19sp"
             android:layout_gravity="center"
             android:text="A组"
             android:textColor="@color/color_EDE8E0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp" />
+            android:layout_marginStart="4dp" />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/r1"
             android:overScrollMode="never"
-            android:layout_width="112dp"
+            android:layout_width="99dp"
             android:layout_height="wrap_content" />
 
 
@@ -53,31 +53,31 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="17dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp">
+        android:layout_marginStart="22dp">
 
 
 
         <TextView
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="4dp"
             android:gravity="center"
-            android:textSize="22sp"
+            android:textSize="19sp"
             android:layout_gravity="center"
             android:text="B组"
             android:textColor="@color/color_EDE8E0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp" />
+            android:layout_marginStart="4dp" />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/r2"
             android:overScrollMode="never"
-            android:layout_width="112dp"
+            android:layout_width="99dp"
             android:layout_height="wrap_content" />
 
 
@@ -88,12 +88,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="22dp"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp">
+        android:layout_marginStart="17dp">
 
 
 
@@ -103,31 +103,62 @@
             android:gravity="center"
             android:textColor="@color/color_ffffff"
             android:background="@drawable/btn_bg"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:text="全选"
-            android:layout_width="110dp"
-            android:layout_height="39dp" />
+            android:layout_width="97dp"
+            android:layout_height="34dp" />
 
         <Button
             android:layout_gravity="center"
             android:id="@+id/btn_c"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="13dp"
             android:gravity="center"
             android:textColor="@color/color_ffffff"
             android:background="@drawable/btn_bg"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:text="取消"
-            android:layout_width="110dp"
-            android:layout_height="39dp" />
+            android:layout_width="97dp"
+            android:layout_height="34dp" />
 
+
+
+
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="48dp"
+            android:orientation="horizontal"
+            android:layout_width="100dp"
+            android:background="@color/color_383838"
+            android:layout_height="43dp">
+
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="100dp"
+                android:layout_height="43dp" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textSize="11dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+
+
+        </FrameLayout>
 
         <TextView
-
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="35dp"
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:text="供电开关"
-            android:textSize="17sp"
+            android:text="照明开关"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -135,40 +166,9 @@
         <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_on_off"
-            android:src="@mipmap/off_icon"
-            android:layout_width="143dp"
-            android:layout_height="80dp" />
-
-
-
-        <FrameLayout
-            android:layout_gravity="center"
-            android:layout_marginTop="35dp"
-            android:orientation="horizontal"
-            android:layout_width="112dp"
-            android:background="@color/color_383838"
-            android:layout_height="48dp">
-
-
-            <ImageView
-                android:id="@+id/img"
-                android:layout_width="112dp"
-                android:layout_height="48dp" />
-
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="11dp"
-                android:text=""
-                android:textSize="12sp"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="11dp" />
-
-
-        </FrameLayout>
+            android:src="@mipmap/no_iocn"
+            android:layout_width="127dp"
+            android:layout_height="71dp"/>
     </LinearLayout>
 
 

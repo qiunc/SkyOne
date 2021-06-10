@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.util.Log;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
@@ -18,43 +17,79 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
+ * @author Administrator
  * @describe
  */
 public class TcpClient {
 
+    private static TcpClient mSocketClient = null;
+    /**
+     * 私有化构造器与反射安全
+     */
+    private TcpClient() {
+        if (mSocketClient != null){
+            throw new RuntimeException("Use getInstance() method to get the single instance of this class.");
+        }
+    }
+
+
     /**
      * single instance TcpClient
      */
-    private static TcpClient mSocketClient = null;
-
-    private TcpClient() {
+    private static class SingletonContainer{
+        private static final TcpClient instance = new TcpClient();
     }
 
     public static TcpClient getInstance() {
-        if (mSocketClient == null) {
-            synchronized (TcpClient.class) {
-                mSocketClient = new TcpClient();
-            }
-        }
+        mSocketClient = SingletonContainer.instance;
         return mSocketClient;
     }
 
-    String TAG_log = "Socket";
+
+
+//    public enum mTcpClient {
+//        INSTANCE;
+//        private final TcpClient instance;
+//        mTcpClient() {
+//            instance = new TcpClient();
+//        }
+//        public TcpClient getInstance() {
+//            return instance;
+//        }
+//    }
+
+    /**
+     设置线程池参数
+     */
+    private static final int CORE_POOL_SIZE = 5;
+    private static final int MAX_POOL_SIZE = 10;
+    private static final int QUEUE_CAPACITY = 100;
+    private static final Long KEEP_ALIVE_TIME = 1L;
+
     private Socket mSocket;
 
     private OutputStream mOutputStream;
     private InputStream mInputStream;
 
-    private SocketThread mSocketThread;
-    //thread flag
     private boolean isStop = false;
+
+    private final ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(
+            CORE_POOL_SIZE,
+            MAX_POOL_SIZE,
+            KEEP_ALIVE_TIME,
+            TimeUnit.SECONDS,
+            new LinkedBlockingDeque<>(QUEUE_CAPACITY),
+            new ThreadPoolExecutor.CallerRunsPolicy());
 
     /**
      * 128 - 数据按照最长接收，一次性
      */
-    private class SocketThread extends Thread {
+    private class SocketThread implements Runnable {
 
         private final String ip;
         private final int port;
@@ -66,9 +101,6 @@ public class TcpClient {
 
         @Override
         public void run() {
-            Log.d(TAG_log, "SocketThread start ");
-            super.run();
-
             //connect ...
             try {
                 if (mSocket != null) {
@@ -97,26 +129,25 @@ public class TcpClient {
                 /* 此处这样做没什么意义不大，真正的socket未连接还是靠心跳发送，等待服务端回应比较好，一段时间内未回应，则socket未连接成功 */
                 else {
                     uiHandler.sendEmptyMessage(-1);
-                    Log.e(TAG_log, "SocketThread connect fail");
                     return;
                 }
 
             } catch (IOException e) {
                 uiHandler.sendEmptyMessage(-1);
-                Log.e(TAG_log, "SocketThread connect io exception = " + e.getMessage());
                 e.printStackTrace();
                 return;
             }
-            Log.d(TAG_log, "SocketThread connect over ");
 
 
             //read ...
-            while (isConnect() && !isStop && !isInterrupted()) {
+            while (isConnect() && !isStop ) {
 
                 int size;
                 try {
                     byte[] buffer = new byte[1024];
-                    if (mInputStream == null) return;
+                    if (mInputStream == null) {
+                        return;
+                    }
                     size = mInputStream.read(buffer);//null data -1 , zrd serial rule size default 10
 
                     if (size > 0) {
@@ -130,12 +161,12 @@ public class TcpClient {
                         uiHandler.sendMessage(msg);
                     }
 
-                    if (size == -1) uiHandler.sendEmptyMessage(-1);
-                    Log.i(TAG_log, "SocketThread read listening");
+                    if (size == -1) {
+                        uiHandler.sendEmptyMessage(-1);
+                    }
 //                    Thread.sleep(100);//log eof
                 } catch (IOException e) {
                     uiHandler.sendEmptyMessage(-1);
-                    Log.e(TAG_log, "SocketThread read io exception = " + e.getMessage());
                     e.printStackTrace();
                     return;
                 }
@@ -151,8 +182,7 @@ public class TcpClient {
      * Exception : android.os.NetworkOnMainThreadException
      */
     public void connect(String ip, int port) {
-        mSocketThread = new SocketThread(ip, port);
-        mSocketThread.start();
+        poolExecutor.execute(new SocketThread(ip, port));
     }
 
     /**
@@ -187,9 +217,6 @@ public class TcpClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if (mSocketThread != null) {
-            mSocketThread.interrupt();//not intime destory thread,so need a flag
-        }
     }
 
 
@@ -200,9 +227,7 @@ public class TcpClient {
     public void sendByteCmd(final byte[] mBuffer, int requestCode) {
         this.requestCode = requestCode;
         if (mOutputStream != null) {
-            new Thread(() -> {
-                sendByte(mBuffer);
-            }).start();
+            poolExecutor.execute(() -> sendByte(mBuffer));
         }
 
     }
@@ -308,10 +333,22 @@ public class TcpClient {
 
     public interface OnDataReceiveListener {
 
+        /**
+         * 接收成功
+         */
         void onConnectSuccess();
 
+        /**
+         * 接收失败
+         */
         void onConnectFail();
 
+        /**
+         * 接收数据的具体逻辑
+         * @param buffer 字节数组
+         * @param size 长度
+         * @param requestCode 请求码
+         */
         void onDataReceive(byte[] buffer, int size, int requestCode);
     }
 

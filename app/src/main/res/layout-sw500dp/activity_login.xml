@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@mipmap/t_login_bg"
-    >
+    tools:context=".ui.login.LoginActivity">
 
 
 
 
 
     <ImageView
-        android:layout_marginTop="93dp"
+        android:layout_marginTop="82dp"
         android:layout_gravity="center"
         android:src="@mipmap/icons_new"
         android:layout_width="wrap_content"
@@ -23,9 +24,9 @@
 
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_marginLeft="115dp"
-        android:layout_marginRight="115dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginRight="102dp"
+        android:layout_marginTop="51dp"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -34,14 +35,14 @@
 
             android:visibility="gone"
             android:src="@mipmap/icons"
-            android:layout_width="80dp"
-            android:layout_height="20dp" />
+            android:layout_width="71dp"
+            android:layout_height="18dp" />
 
         <TextView
 
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:text="@string/sky_one_intriduce"
+            android:textSize="14dp"
+            android:text="@string/sky_one_introduce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -51,23 +52,23 @@
 
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:layout_width="342dp"
+        android:layout_marginTop="35dp"
+        android:layout_width="304dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="55dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="21dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="18dp"
+                android:layout_width="19dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="16dp"
                 android:src="@mipmap/logina"
-                android:layout_marginStart="18dp" />
+                android:layout_marginStart="16dp" />
 
             <FrameLayout
                 android:layout_width="0dp"
@@ -82,11 +83,11 @@
                     android:gravity="center_vertical"
                     android:hint="请输入用户名"
                     android:inputType="text"
-                    android:paddingLeft="24dp"
-                    android:paddingRight="24dp"
+                    android:paddingLeft="21dp"
+                    android:paddingRight="21dp"
                     android:textColor="@color/white"
                     android:textColorHint="@color/color_989898"
-                    android:textSize="22sp" />
+                    android:textSize="19sp" />
 
 
 
@@ -103,16 +104,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="55dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="21dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="18dp"
+                android:layout_width="19dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="16dp"
                 android:src="@mipmap/loginv"
-                android:layout_marginStart="18dp" />
+                android:layout_marginStart="16dp" />
 
 
             <FrameLayout
@@ -129,11 +130,11 @@
                     android:hint="请输入密码"
                     android:inputType="textPassword"
                     android:maxLength="32"
-                    android:paddingLeft="24dp"
-                    android:paddingRight="24dp"
+                    android:paddingLeft="21dp"
+                    android:paddingRight="21dp"
                     android:textColor="@color/white"
                     android:textColorHint="@color/color_989898"
-                    android:textSize="22sp" />
+                    android:textSize="19sp" />
 
 
 
@@ -150,14 +151,14 @@
 
 
     <TextView
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="26dp"
         android:id="@+id/btn_login"
         android:gravity="center"
         android:textColor="@color/color_ffffff"
         android:background="@mipmap/loginb"
         android:layout_gravity="center"
         android:text="登录"
-        android:layout_width="342dp"
-        android:layout_height="40dp" />
+        android:layout_width="304dp"
+        android:layout_height="35dp" />
 
 </LinearLayout>
