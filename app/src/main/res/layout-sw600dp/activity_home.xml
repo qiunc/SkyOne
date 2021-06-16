@@ -10,22 +10,23 @@
 
     <FrameLayout
         android:background="@color/color_3B3F41"
-        android:layout_marginLeft="25px"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
-        android:layout_height="95px"
-        android:orientation="horizontal">
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp">
 
         <ImageView
             android:id="@+id/test"
-            android:layout_width="261px"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
+            android:layout_width="174dp"
+            android:layout_height="39dp"
+            android:layout_gravity="center|start"
             android:src="@mipmap/my_icons" />
 
 
         <LinearLayout
             android:id="@+id/lin_tops"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
@@ -34,11 +35,12 @@
             <LinearLayout
                 android:visibility="invisible"
                 android:id="@+id/lin_top"
-                android:layout_marginRight="30px"
+                android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp">
 
                 <ImageView
                     android:layout_gravity="center"
@@ -51,22 +53,23 @@
                     android:id="@+id/home_a"
                     android:textColor="@color/color_2CB6B2"
                     android:text="0℃"
-                    android:textSize="35px"
+                    android:textSize="23sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <ImageView
-                    android:layout_marginLeft="20px"
+                    android:layout_marginLeft="13dp"
                     android:layout_gravity="center"
                     android:src="@mipmap/top_b"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp" />
 
                 <TextView
                     android:id="@+id/home_b"
                     android:textColor="@color/color_2CB6B2"
                     android:text="0%"
-                    android:textSize="35px"
+                    android:textSize="23sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -78,11 +81,12 @@
 
             <ImageView
                 android:id="@+id/btn_right"
-                android:layout_marginRight="30px"
+                android:layout_marginRight="20dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/home_top"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="26dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp" />
 
 
 
@@ -97,20 +101,20 @@
 
 
     </FrameLayout>
-<View
-    android:background="#2783B3"
-    android:layout_marginLeft="28px"
-    android:layout_marginRight="28px"
-    android:layout_width="match_parent"
-    android:layout_height="1px" />
+    <View
+        android:background="#2783B3"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 
     <FrameLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp">
 
         <com.tj.skyone.widget.MyViewPager
-            android:layout_marginBottom="480px"
+            android:layout_marginBottom="146dp"
             android:id="@+id/mViewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -118,19 +122,20 @@
 
         <FrameLayout
             android:layout_gravity="bottom"
-            android:background="@mipmap/home_botton"
+            android:background="@mipmap/t_home_botton"
             android:layout_width="match_parent"
-            android:layout_height="549px"
+            android:layout_height="222dp"
             android:orientation="vertical">
 
 
             <LinearLayout
 
-                android:layout_marginLeft="60px"
-                android:layout_marginTop="140px"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="93dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp">
 
 
 
@@ -140,18 +145,18 @@
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:orientation="vertical"
-                    android:layout_width="159px"
-                    android:layout_height="152px">
+                    android:layout_width="106dp"
+                    android:layout_height="101dp">
 
 
                     <ImageView
                         android:src="@mipmap/home_h"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_width="70dp"
+                        android:layout_height="71dp"  />
 
                     <TextView
                         android:text="主页"
-                        android:textSize="33px"
+                        android:textSize="22sp"
                         android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -161,9 +166,10 @@
 
 
                 <FrameLayout
-                    android:layout_marginLeft="45px"
+                    android:layout_marginLeft="26dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp">
 
 
                     <LinearLayout
@@ -171,18 +177,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:layout_width="106dp"
+                        android:layout_height="101dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_by"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="70dp"
+                            android:layout_height="71dp"/>
 
                         <TextView
                             android:text="摇臂"
-                            android:textSize="33px"
+                            android:textSize="22sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -193,18 +199,19 @@
 
                     <ImageView
                         android:id="@+id/img_yb"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginEnd="3dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="45px"
+                    android:layout_marginLeft="26dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -214,18 +221,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:layout_width="106dp"
+                        android:layout_height="101dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_p"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="70dp"
+                            android:layout_height="71dp"/>
 
                         <TextView
                             android:text="给排水"
-                            android:textSize="33px"
+                            android:textSize="22sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -236,71 +243,63 @@
 
                     <ImageView
                         android:id="@+id/img_gps"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginEnd="3dp" />
 
 
                 </FrameLayout>
 
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_marginLeft="60px"
-                android:layout_marginBottom="46px"
-                android:layout_gravity="bottom"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
                 <FrameLayout
+                    android:layout_marginLeft="26dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp">
 
-                <LinearLayout
-                    android:id="@+id/btn4"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="159px"
-                    android:layout_height="152px">
-
-
-                    <ImageView
-                        android:src="@mipmap/home_b_g"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="高压"
-                        android:textSize="33px"
-                        android:textColor="@color/white"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:id="@+id/btn4"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="106dp"
+                        android:layout_height="101dp">
 
 
-                </LinearLayout>
+                        <ImageView
+                            android:src="@mipmap/home_b_g"
+                            android:layout_width="70dp"
+                            android:layout_height="71dp"/>
+
+                        <TextView
+                            android:text="高压"
+                            android:textSize="22sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
                     <ImageView
                         android:id="@+id/img_gy"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginEnd="3dp" />
                 </FrameLayout>
 
 
                 <FrameLayout
-                    android:layout_marginLeft="45px"
+                    android:layout_marginLeft="26dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp">
 
 
                     <LinearLayout
@@ -308,18 +307,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:layout_width="106dp"
+                        android:layout_height="101dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_t"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="70dp"
+                            android:layout_height="71dp"/>
 
                         <TextView
                             android:text="通风"
-                            android:textSize="33px"
+                            android:textSize="22sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -330,20 +329,22 @@
 
                     <ImageView
                         android:id="@+id/img_tf"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginEnd="3dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="45px"
+                    android:layout_marginLeft="26dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp">
 
 
                     <LinearLayout
@@ -351,18 +352,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:layout_width="106dp"
+                        android:layout_height="101dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_z"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="70dp"
+                            android:layout_height="71dp" />
 
                         <TextView
                             android:text="照明"
-                            android:textSize="33px"
+                            android:textSize="22sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -373,20 +374,21 @@
 
                     <ImageView
                         android:id="@+id/img_zm"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="13dp"
+                        android:layout_height="13dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="45px"
+                    android:layout_marginLeft="40px"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40px">
 
 
                     <LinearLayout
@@ -394,18 +396,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:layout_width="106dp"
+                        android:layout_height="101dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_b_d"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="70dp"
+                            android:layout_height="71dp"/>
 
                         <TextView
                             android:text="低压"
-                            android:textSize="33px"
+                            android:textSize="22sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -416,20 +418,22 @@
 
                     <ImageView
                         android:id="@+id/img_dy"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginEnd="3dp" />
 
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginLeft="45px"
+                    android:layout_marginLeft="26dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp">
 
 
                     <LinearLayout
@@ -437,18 +441,18 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:layout_width="159px"
-                        android:layout_height="152px">
+                        android:layout_width="106dp"
+                        android:layout_height="101dp">
 
 
                         <ImageView
                             android:src="@mipmap/home_btn_inf"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="70dp"
+                            android:layout_height="71dp" />
 
                         <TextView
                             android:text="信息"
-                            android:textSize="33px"
+                            android:textSize="22dp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -459,12 +463,13 @@
 
                     <ImageView
                         android:visibility="invisible"
-                        android:layout_marginBottom="5px"
-                        android:layout_marginRight="5px"
-                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="bottom|end"
                         android:src="@drawable/ovals"
-                        android:layout_width="20px"
-                        android:layout_height="20px" />
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginEnd="3dp" />
 
 
                 </FrameLayout>
@@ -472,14 +477,18 @@
 
             </LinearLayout>
 
+
+
+
             <ImageView
                 android:id="@+id/btn_off"
-                android:layout_marginRight="38px"
-                android:layout_marginTop="50px"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="53dp"
                 android:layout_gravity="right"
-                android:src="@mipmap/home_btn_ds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"  />
+                android:src="@mipmap/t_off"
+                android:layout_width="156dp"
+                android:layout_height="156dp"
+                android:layout_marginEnd="25dp" />
 
 
 

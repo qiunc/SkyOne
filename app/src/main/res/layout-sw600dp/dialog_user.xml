@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@mipmap/user_bgs"
+    android:layout_width="780px"
+    android:layout_height="521px">
+
+
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/update"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="修改密码"
+            android:textSize="37px"
+            android:textColor="#3B3F41"
+            android:background="@mipmap/user_btns"
+            android:layout_width="730px"
+            android:layout_height="95px" />
+
+        <TextView
+            android:id="@+id/add"
+            android:textColor="#3B3F41"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="创建新用户"
+            android:textSize="37px"
+            android:background="@mipmap/user_btns"
+            android:layout_width="730px"
+            android:layout_height="95px" />
+
+        <TextView
+            android:id="@+id/mgt"
+            android:textColor="#3B3F41"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="管理用户"
+            android:textSize="37px"
+            android:background="@mipmap/user_btns"
+            android:layout_width="730px"
+            android:layout_height="95px" />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/btn"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="20px"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:textColor="@color/color_383838"
+        android:background="@drawable/dialog_btn_f"
+        android:textSize="37px"
+        android:text="退出"
+        android:layout_width="250px"
+        android:layout_height="65px" />
+
+</FrameLayout>

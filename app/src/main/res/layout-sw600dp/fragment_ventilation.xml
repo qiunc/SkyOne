@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:paddingLeft="70dp"
+    android:background="@color/color_383838"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="70dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@mipmap/t_ra_show"
+        android:layout_width="450dp"
+        android:layout_height="411dp" />
+
+
+    <LinearLayout
+        android:layout_marginLeft="200dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp">
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/gray_bgs"
+        android:orientation="horizontal"
+        android:layout_width="315dp"
+        android:layout_height="142dp">
+
+
+        <TextView
+            android:layout_marginLeft="33dp"
+            android:textColor="@color/color_383838"
+            android:layout_gravity="center"
+            android:textSize="34sp"
+            android:text="风速"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp" />
+
+        <TextView
+            android:id="@+id/tv_v"
+            android:textColor="@color/color_383838"
+            android:layout_marginLeft="46dp"
+            android:layout_gravity="center"
+            android:textSize="53sp"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp" />
+
+        <TextView
+            android:textColor="@color/color_383838"
+            android:layout_gravity="center"
+            android:textSize="53sp"
+            android:text="Hz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="96dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_f"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/btn_bg"
+            android:textSize="28sp"
+            android:text="额定风速"
+            android:layout_width="152dp"
+            android:layout_height="60dp" />
+
+
+
+        <FrameLayout
+            android:id="@+id/btn_add"
+            android:layout_marginLeft="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:layout_width="152dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="34dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/new_bbb"
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="33dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/btn_on_off"
+            android:src="@mipmap/no_iocn_ms"
+            android:layout_width="152dp"
+            android:layout_height="60dp" />
+
+
+
+        <FrameLayout
+            android:id="@+id/btn_re"
+            android:layout_marginLeft="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:layout_width="152dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="34dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/new_aaa"
+                android:layout_width="26dp"
+                android:layout_height="6dp" />
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
