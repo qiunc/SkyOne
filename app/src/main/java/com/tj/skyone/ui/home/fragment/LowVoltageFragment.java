@@ -20,6 +20,7 @@ import com.tj.skyone.base.BaseFragment;
 import com.tj.skyone.bean.LowvoltBean;
 import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.HttpParam;
+import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
@@ -227,7 +228,7 @@ public class LowVoltageFragment extends BaseFragment {
 
     @OnClick({R.id.tv_z, R.id.tv_j, R.id.tv_s, R.id.tv_o})
     public void onViewClickeds(View view) {
-        if (GlobalApp.Companion.getOpenTheSwitch()) {
+        if (GlobalApp.Companion.getOpenTheSwitch() && !NoDoubleClickUtils.isDoubleClick()) {
             switch (view.getId()) {
                 case R.id.tv_z:
 

@@ -17,6 +17,7 @@ import com.tj.skyone.base.BaseFragment;
 import com.tj.skyone.bean.VentilationBean;
 import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.HttpParam;
+import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
@@ -98,7 +99,7 @@ public class VentilationFragment extends BaseFragment {
     @OnClick({R.id.btn_f, R.id.btn_add, R.id.btn_on_off, R.id.btn_re})
     public void onViewClicked(View view) {
 
-        if (GlobalApp.Companion.getOpenTheSwitch()) {
+        if (GlobalApp.Companion.getOpenTheSwitch() && !NoDoubleClickUtils.isDoubleClick()) {
             switch (view.getId()) {
                 case R.id.btn_f:
 

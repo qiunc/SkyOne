@@ -86,7 +86,7 @@
                             android:singleLine="true"
                             android:textColor="@color/color_383838"
                             android:textColorHint="@color/color_383838"
-                            android:textSize="26sp"
+                            android:textSize="35sp"
                             android:layout_marginStart="44dp" />
 
                         <TextView

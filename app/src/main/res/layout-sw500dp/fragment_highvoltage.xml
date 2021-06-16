@@ -5,7 +5,9 @@
     android:paddingRight="13dp"
     android:paddingLeft="46dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingEnd="13dp"
+    android:paddingStart="46dp">
 
     <ImageView
         android:layout_gravity="center"

@@ -270,7 +270,7 @@ public class HomeActivity extends BaseActivity implements CustomAdapt {
 
         } else if (StringUtils.equals("homepage", event.getEventCode())) {
 
-            //dismissLoadingDialog();
+            dismissLoadingDialog();
 
             HomeCheckBean bean = GsonUtils.fromJson(event.getAnyData().toString(), HomeCheckBean.class);
             Log.e("returnData", bean.getKey());

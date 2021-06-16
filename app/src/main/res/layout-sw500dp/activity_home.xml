@@ -134,7 +134,8 @@
                 android:layout_marginTop="62dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp">
 
 
 
@@ -276,7 +277,7 @@
 
                         <TextView
                             android:text="高压"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -298,7 +299,8 @@
                 <FrameLayout
                     android:layout_marginLeft="17dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp">
 
 
                     <LinearLayout
@@ -317,7 +319,7 @@
 
                         <TextView
                             android:text="通风"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />

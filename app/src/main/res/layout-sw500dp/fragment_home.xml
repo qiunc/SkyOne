@@ -36,7 +36,7 @@
             android:id="@+id/dates"
             android:layout_marginLeft="77dp"
             android:textColor="@color/color_2CB6B2"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:text="星期三"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

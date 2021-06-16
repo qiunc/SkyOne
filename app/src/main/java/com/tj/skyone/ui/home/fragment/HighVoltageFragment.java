@@ -23,6 +23,7 @@ import com.tj.skyone.bean.GroupBean;
 import com.tj.skyone.bean.HighvoltBean;
 import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.HttpParam;
+import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
@@ -201,7 +202,7 @@ public class HighVoltageFragment extends BaseFragment {
 
     @OnClick({R.id.btn_a, R.id.btn_c, R.id.btn_on_off, R.id.img})
     public void onViewClicked(View view) {
-        if (GlobalApp.Companion.getOpenTheSwitch()) {
+        if (GlobalApp.Companion.getOpenTheSwitch() && !NoDoubleClickUtils.isDoubleClick()) {
             List<GroupBean> list1 = (List<GroupBean>) gropAdapter1.getData();
             List<GroupBean> list2 = (List<GroupBean>) gropAdapter2.getData();
             switch (view.getId()) {

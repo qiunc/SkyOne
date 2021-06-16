@@ -101,7 +101,8 @@
                    android:layout_gravity="center"
                    android:src="@mipmap/gn"
                    android:layout_width="14dp"
-                   android:layout_height="14dp" />
+                   android:layout_height="14dp"
+                   android:layout_marginStart="22dp" />
 
                <TextView
                    android:layout_marginLeft="3dp"
@@ -239,7 +240,7 @@
 
                        <TextView
                            android:layout_gravity="center"
-                           android:textSize="11dp"
+                           android:textSize="11sp"
                            android:text="失败次数："
                            android:textColor="@color/color_ffffff"
                            android:layout_width="wrap_content"

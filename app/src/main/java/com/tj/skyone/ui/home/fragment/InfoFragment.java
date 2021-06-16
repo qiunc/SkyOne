@@ -18,6 +18,7 @@ import com.tj.skyone.bean.InofBean;
 import com.tj.skyone.bean.MessageBean;
 import com.tj.skyone.ui.GlobalApp;
 import com.tj.skyone.utils.HttpParam;
+import com.tj.skyone.utils.NoDoubleClickUtils;
 import com.tj.skyone.utils.TcpClient;
 import com.tj.skyone.utils.eventbus.AnyEventTypes;
 import com.tj.skyone.utils.eventbus.EventBusUtils;
@@ -148,7 +149,7 @@ public class InfoFragment extends BaseFragment {
     @OnClick({R.id.info_a, R.id.info_b, R.id.info_c, R.id.info_d,R.id.info_all})
     public void onViewClicked(View view) {
 
-        if (GlobalApp.Companion.getOpenTheSwitch()) {
+        if (GlobalApp.Companion.getOpenTheSwitch() && !NoDoubleClickUtils.isDoubleClick()) {
 
             List<InofBean> list1 = adapter1.getData();
             List<InofBean> list2 = adapter2.getData();

@@ -65,7 +65,7 @@
         <TextView
             android:layout_marginLeft="4dp"
             android:gravity="center"
-            android:textSize="19dp"
+            android:textSize="19sp"
             android:layout_gravity="center"
             android:text="B组"
             android:textColor="@color/color_EDE8E0"
@@ -108,7 +108,7 @@
         <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_on_off"
-            android:src="@mipmap/no_iocn"
+            android:src="@mipmap/off_icon"
             android:layout_width="127dp"
             android:layout_height="71dp" />
 
